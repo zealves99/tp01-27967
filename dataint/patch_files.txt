@@ -1,0 +1,7 @@
+${Internal.Entry.Current.Directory}/patch/CONTRA_t.csv
+${Internal.Entry.Current.Directory}/patch/CONTRAS BRABO_t.csv
+${Internal.Entry.Current.Directory}/patch/DEUS_t.csv
+${Internal.Entry.Current.Directory}/patch/FRT_t.csv
+${Internal.Entry.Current.Directory}/patch/PAR PONTUAIS_t.csv
+${Internal.Entry.Current.Directory}/patch/PONTUAIS_t.csv
+${Internal.Entry.Current.Directory}/patch/PUBLICO_t.csv
