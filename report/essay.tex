@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{longtable} % Para tabelas longas
+
+\title{Relatório Técnico Final: Sistema de Monitorização e Controlo de Consumo de Energia}
+\author{Gerado por Gemini com base em ficheiros de configuração, dados e transformações ETL}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		Este relatório descreve a estrutura, as funcionalidades e as dependências de um sistema híbrido de processamento de dados e visualização, focado na monitorização e análise detalhada de consumo de energia (Potência e Energia). O sistema utiliza o \textbf{Pentaho Data Integration (PDI/Kettle)} para orquestração de transformações de dados (ETL), scripts \textbf{Python} (\texttt{pandas}, \texttt{matplotlib}) para a geração de gráficos e um dashboard Node-RED para a apresentação final.
+	\end{abstract}
+	
+	\section{Introdução}
+	
+	O programa é um sistema de software concebido para monitorizar e apresentar dados detalhados de consumo de energia. A arquitetura mista utiliza o **Pentaho Data Integration (Kettle)** para a orquestração e o processamento ETL, enquanto os scripts Python são dedicados à fase final de visualização. O sistema rastreia o consumo a nível de \textbf{dimmer} e \textbf{fixture}, agregando os dados por **camada** (Layer).
+	
+	\section{Transformações de Dados e Geração de Gráficos}
+	
+	O pipeline de dados é dividido entre a orquestração do Kettle e a capacidade analítica do Python.
+	
+	\subsection{Pentaho Kettle (Orquestração ETL)}
+	
+	O Kettle é a ferramenta central que gere o fluxo de trabalho dos dados:
+	
+	\begin{itemize}
+		\item \textbf{Cálculo de Consumo (\texttt{Calculate\_Power\_Consumption.ktr}):} Transforma dados brutos de consumo em valores de potência e energia.
+		\item \textbf{Geração de Gráficos (\texttt{Graph\_Creation.ktr}):} Esta transformação é crítica, pois chama o script Python (`graph\_generator.py`) para produzir os ficheiros de imagem (PNG) e os dados JSON/CSV finais para o Node-RED.
+		\item \textbf{Gestão (\texttt{Patch\_Import.ktr} e \texttt{SendEmail.ktr}):} Transforma e gere o sistema (importação de patches) e a comunicação (envio de email).
+	\end{itemize}
+	
+	\subsection{Script Python de Geração de Gráficos (\texttt{graph\_generator.py})}
+	
+	O ficheiro \texttt{graph\_generator.py} é o script Python que materializa os dados processados em visualizações, sendo executado pela transformação Kettle \texttt{Graph\_Creation.ktr}. Este script utiliza as bibliotecas \texttt{matplotlib} e \texttt{pandas} (como definido em `requirements.txt`) para:
+	
+	\begin{enumerate}
+		\item Ler os dados processados de consumo (provavelmente no formato CSV ou JSON).
+		\item Criar o **Gráfico de Barras** para a Potência por Camada (\texttt{layer\_bar\_graph.png}).
+		\item Criar o **Gráfico Circular** para a distribuição do consumo por camada (\texttt{layer\_pie\_graph.png}).
+		\item Exportar os dados de série temporal para o dashboard (e.g., \texttt{total-power-graph-data.json/csv}, \texttt{total-energy-graph-data.json/csv}).
+	\end{enumerate}
+	
+	\section{Visualizações do Dashboard (Node-RED)}
+	
+	O dashboard apresenta as seguintes visualizações, que são o output direto do pipeline ETL/Python:
+	
+	\begin{itemize}
+		\item **Gráficos por Camada:** Gráfico de Barras e Gráfico Circular.
+		\item **Gráficos de Séries Temporais:** Potência Total e Energia Total.
+		\item **Gráfico de Barras Node-RED:** Visualização dedicada ``Power Used by Layer''.
+	\end{itemize}
+	
+	\section{Dependências e Instalação}
+	
+	\subsection{Dependências Essenciais}
+	
+	\begin{itemize}
+		\item **ETL/Orquestração:** Pentaho Data Integration (Kettle) para executar os ficheiros \texttt{.ktr} e \texttt{.kjb}.
+		\item **Visualização Python:**
+		\begin{itemize}
+			\item \textbf{pandas:} Versão $\ge 2.0$ (para manipulação de dados).
+			\item \textbf{matplotlib:} Versão $\ge 3.7$ (para geração de gráficos).
+		\end{itemize}
+		\item **Dashboard:** \textbf{node-red-dashboard} na versão \texttt{3.6.6}.
+	\end{itemize}
+	
+	\subsection{Instruções de Instalação}
+	
+	As bibliotecas Python devem ser instaladas através do comando:
+	
+	\begin{verbatim}
+		python -m pip install matplotlib pandas
+	\end{verbatim}
+	
+\end{document}
