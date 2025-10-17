@@ -393,7 +393,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Entry.Current.Directory}\Graph_Creation</filename>
+      <filename>${Internal.Entry.Current.Directory}\Graph_Creation.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -421,7 +421,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>640</xloc>
+      <xloc>768</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -499,7 +499,37 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>768</xloc>
+      <xloc>896</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>HTTP</name>
+      <description/>
+      <type>HTTP</type>
+      <attributes/>
+      <url>http://localhost:1880/kettle-trigger</url>
+      <targetfilename/>
+      <file_appended>N</file_appended>
+      <date_time_added>N</date_time_added>
+      <targetfilename_extension/>
+      <uploadfilename/>
+      <run_every_row>N</run_every_row>
+      <url_fieldname/>
+      <upload_fieldname/>
+      <dest_fieldname/>
+      <username/>
+      <password>Encrypted </password>
+      <proxy_host/>
+      <proxy_port/>
+      <non_proxy_hosts/>
+      <addfilenameresult>Y</addfilenameresult>
+      <headers>
+      </headers>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>608</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -526,15 +556,6 @@
     <hop>
       <from>CueData Import</from>
       <to>Calculate Power Consumption</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Calculate Power Consumption</from>
-      <to>Graph_Generator</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

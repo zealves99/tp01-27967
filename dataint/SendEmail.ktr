@@ -550,7 +550,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>Será que Funciona?</nullif>
+        <nullif>Relatório de Consumo de Energia do Espetáculo</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -562,7 +562,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>Estou a testar se estes gráficos funcionam.</nullif>
+        <nullif>Segue em anexo o relatório de energia consumida durante o espetáculo Marat-Sade, no Teatro Helena Sá e Costa.</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -706,7 +706,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
+      <xloc>320</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
