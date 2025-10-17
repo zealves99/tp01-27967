@@ -1,0 +1,843 @@
+[
+    {
+        "id": "8caf5f097bf37049",
+        "type": "inject",
+        "z": "ad532754904a6f93",
+        "name": "Load Fixture CSV",
+        "props": [
+            {
+                "p": "filename",
+                "v": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\fixture_consumption.csv",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "e5da1f5da0392cc0"
+            ]
+        ]
+    },
+    {
+        "id": "c9b005ed5a757845",
+        "type": "inject",
+        "z": "ad532754904a6f93",
+        "name": "Load Dimmer CSV",
+        "props": [
+            {
+                "p": "filename",
+                "v": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\dimmer_consumption.csv",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "6ba954bdf52a584e"
+            ]
+        ]
+    },
+    {
+        "id": "e5da1f5da0392cc0",
+        "type": "file in",
+        "z": "ad532754904a6f93",
+        "name": "Read Fixture CSV",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "allProps": false,
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "4d28022248d04ac5"
+            ]
+        ]
+    },
+    {
+        "id": "6ba954bdf52a584e",
+        "type": "file in",
+        "z": "ad532754904a6f93",
+        "name": "Read Dimmer CSV",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "131915f284e6273a"
+            ]
+        ]
+    },
+    {
+        "id": "4d28022248d04ac5",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Parse Fixture CSV to Objects",
+        "func": "// Convert CSV string to object array\nlet lines = msg.payload.split(/\\r?\\n/);\nlet headers = lines.shift().split(';');\nmsg.payload = lines.map(line => {\n    let values = line.split(';');\n    let obj = {};\n    headers.forEach((h,i)=> obj[h.trim()] = values[i]?values[i].trim():null);\n    return obj;\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 160,
+        "wires": [
+            [
+                "2575575518609b38",
+                "955ced84acb3f1ab"
+            ]
+        ]
+    },
+    {
+        "id": "131915f284e6273a",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Parse Dimmer CSV to Objects",
+        "func": "// Convert CSV string to object array\nlet lines = msg.payload.split(/\\r?\\n/);\nlet headers = lines.shift().split(';');\nmsg.payload = lines.map(line => {\n    let values = line.split(';');\n    let obj = {};\n    headers.forEach((h,i)=> obj[h.trim()] = values[i]?values[i].trim():null);\n    return obj;\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "2575575518609b38"
+            ]
+        ]
+    },
+    {
+        "id": "2575575518609b38",
+        "type": "join",
+        "z": "ad532754904a6f93",
+        "name": "Join Fixtures + Dimmers",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 860,
+        "y": 190,
+        "wires": [
+            [
+                "25542686d5329abd",
+                "c7e5d75a0d0748c1"
+            ]
+        ]
+    },
+    {
+        "id": "c7e5d75a0d0748c1",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Flatten Arrays",
+        "func": "msg.payload = msg.payload.flat();\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 200,
+        "wires": [
+            [
+                "62bf5ae28567ac56",
+                "d0541c661bfe8dfc",
+                "a7b4fbd65daa8969",
+                "7b70034427da4e0e",
+                "f87f6495840d8753"
+            ]
+        ]
+    },
+    {
+        "id": "d0541c661bfe8dfc",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Aggregate Power by Layer",
+        "func": "let data = {};\nmsg.payload.forEach(row => {\n    let layer = row.Layer || 'Unknown';\n    data[layer] = (data[layer] || 0) + parseFloat(row.PowerUsed || 0);\n});\n\nmsg.payload = [{\n    series: [\"PowerUsed\"],\n    data: [ Object.values(data) ],\n    labels: Object.keys(data)\n}];\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 160,
+        "wires": [
+            [
+                "9fe3f80d08f228f7",
+                "9355f5415cc95f26",
+                "de2134e4c33e7174",
+                "a1a9ad0a85bf719a"
+            ]
+        ]
+    },
+    {
+        "id": "a7b4fbd65daa8969",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Aggregate Power by FixtureType",
+        "func": "let data = {};\nmsg.payload.forEach(row => {\n    let type = row.FixtureType || 'Unknown';\n    data[type] = (data[type] || 0) + parseFloat(row.PowerUsed || 0);\n});\n\nmsg.payload = [{\n    series: [\"PowerUsed\"],\n    data: [ Object.values(data) ],\n    labels: Object.keys(data)\n}];\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 220,
+        "wires": [
+            [
+                "fa70ad687428acfd",
+                "707232172da92824",
+                "3e9d5cc1c0168f17",
+                "c6e2f488ca7e01c8"
+            ]
+        ]
+    },
+    {
+        "id": "de2134e4c33e7174",
+        "type": "ui_chart",
+        "z": "ad532754904a6f93",
+        "name": "Power by Layer",
+        "group": "dashboard_group",
+        "order": 1,
+        "width": "12",
+        "height": "8",
+        "label": "Power Used by Layer",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "auto",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "",
+        "removeOlderPoints": "",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1900,
+        "y": 180,
+        "wires": [
+            [
+                "8966e0744b95634e"
+            ]
+        ]
+    },
+    {
+        "id": "e72cb0df05575977",
+        "type": "ui_table",
+        "z": "ad532754904a6f93",
+        "group": "dashboard_group",
+        "name": "Layer Table",
+        "width": "12",
+        "height": "25",
+        "columns": [
+            {
+                "field": "Layer",
+                "title": "Layer",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "PowerUsed",
+                "title": "Power Used (W)",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 2030,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fa70ad687428acfd",
+        "type": "ui_chart",
+        "z": "ad532754904a6f93",
+        "name": "Power by FixtureType",
+        "group": "dashboard_group",
+        "order": 2,
+        "width": "12",
+        "height": "8",
+        "label": "Power Used by Fixture Type",
+        "chartType": "bar",
+        "xformat": "auto",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "",
+        "removeOlderPoints": "",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1900,
+        "y": 240,
+        "wires": [
+            [
+                "e351136707d526cd"
+            ]
+        ]
+    },
+    {
+        "id": "707232172da92824",
+        "type": "ui_table",
+        "z": "ad532754904a6f93",
+        "group": "dashboard_group",
+        "name": "Fixture Table",
+        "outputs": 0,
+        "x": 1900,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9fe3f80d08f228f7",
+        "type": "debug",
+        "z": "ad532754904a6f93",
+        "name": "Aggregate Layer",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1810,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3e9d5cc1c0168f17",
+        "type": "debug",
+        "z": "ad532754904a6f93",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "555b841486f2460f",
+        "type": "ui_chart",
+        "z": "ad532754904a6f93",
+        "name": "Power By Fixture Type",
+        "group": "dashboard_group",
+        "order": 4,
+        "width": "12",
+        "height": "8",
+        "label": "Power By Type (Circular)",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2260,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6e2f488ca7e01c8",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Transform to Pie Chart",
+        "func": "let seriesData = msg.payload[0]; // pega o objeto do gráfico de barras\nlet pieData = [];\n\nfor (let i = 0; i < seriesData.data[0].length; i++) {\n    let value = seriesData.data[0][i];\n    let label = seriesData.labels[i] || \"Unknown\";\n    if (value > 0) {\n        pieData.push({ label: label.trim(), value: value });\n    }\n}\n\nmsg.payload = pieData;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1860,
+        "y": 380,
+        "wires": [
+            [
+                "f3602f03323ca929"
+            ]
+        ]
+    },
+    {
+        "id": "c962554f4c669fe0",
+        "type": "debug",
+        "z": "ad532754904a6f93",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2200,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f3602f03323ca929",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Slicing",
+        "func": "let slices = msg.payload; // array de {label, value}\n\nlet messages = slices.map(s => {\n    return { payload: s.value, topic: s.label };\n});\n\nreturn [messages]; // envia todas as mensagens em sequência\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2050,
+        "y": 380,
+        "wires": [
+            [
+                "555b841486f2460f",
+                "c962554f4c669fe0"
+            ]
+        ]
+    },
+    {
+        "id": "9fb068f5170e1182",
+        "type": "ui_chart",
+        "z": "ad532754904a6f93",
+        "name": "Power By Layer",
+        "group": "dashboard_group",
+        "order": 4,
+        "width": "12",
+        "height": "8",
+        "label": "Power By Layer (Circular)",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "0",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2240,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9355f5415cc95f26",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Transform to Pie Chart",
+        "func": "let seriesData = msg.payload[0]; // pega o objeto do gráfico de barras\nlet pieData = [];\n\nfor (let i = 0; i < seriesData.data[0].length; i++) {\n    let value = seriesData.data[0][i];\n    let label = seriesData.labels[i] || \"Unknown\";\n    if (value > 0) {\n        pieData.push({ label: label.trim(), value: value });\n    }\n}\n\nmsg.payload = pieData;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1860,
+        "y": 340,
+        "wires": [
+            [
+                "1dc3d2b80f254953"
+            ]
+        ]
+    },
+    {
+        "id": "1dc3d2b80f254953",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Slicing",
+        "func": "let slices = msg.payload; // array de {label, value}\n\nlet messages = slices.map(s => {\n    return { payload: s.value, topic: s.label };\n});\n\nreturn [messages]; // envia todas as mensagens em sequência\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2050,
+        "y": 340,
+        "wires": [
+            [
+                "9fb068f5170e1182"
+            ]
+        ]
+    },
+    {
+        "id": "955ced84acb3f1ab",
+        "type": "debug",
+        "z": "ad532754904a6f93",
+        "name": "Entry",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "25542686d5329abd",
+        "type": "debug",
+        "z": "ad532754904a6f93",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "62bf5ae28567ac56",
+        "type": "debug",
+        "z": "ad532754904a6f93",
+        "name": "Flatten Arrays",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a1a9ad0a85bf719a",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Table Formmating",
+        "func": "// msg.payload vem do aggregate power by layer\nlet payloadChart = msg.payload[0]; // objeto com series, data e labels\n\n// transforma em array de objetos {label, value}\nmsg.payload = payloadChart.labels.map((label, i) => {\n    return {\n        Layer: label,\n        PowerUsed: payloadChart.data[0][i]\n    };\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1810,
+        "y": 120,
+        "wires": [
+            [
+                "e72cb0df05575977"
+            ]
+        ]
+    },
+    {
+        "id": "7b70034427da4e0e",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Calculate Total Power Usage",
+        "func": "let totalPower = 0;\nmsg.payload.forEach(row => {\n    let P = parseFloat(row.PowerUsed);\n    if (!isNaN(P)) totalPower += P;\n});\nmsg.payload = parseFloat(totalPower.toFixed(2));\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 620,
+        "wires": [
+            [
+                "6cf047815b248b4a",
+                "f085584eb005a433"
+            ]
+        ]
+    },
+    {
+        "id": "6cf047815b248b4a",
+        "type": "ui_gauge",
+        "z": "ad532754904a6f93",
+        "name": "Total Power Usage (W)",
+        "group": "dashboard_group",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Total Power Usage Watts",
+        "label": "Watts",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "300000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "100000",
+        "seg2": "200000",
+        "diff": false,
+        "className": "",
+        "x": 1750,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "5ed7b509b492063a",
+        "type": "ui_gauge",
+        "z": "ad532754904a6f93",
+        "name": "Total Energy Usage (Wh)",
+        "group": "dashboard_group",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Total Energy Usage Watthour",
+        "label": "Watthour",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "250000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "75000",
+        "seg2": "150000",
+        "diff": false,
+        "className": "",
+        "x": 1750,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f87f6495840d8753",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Calculate Total Energy Usage",
+        "func": "let totalEnergy = 0;\nmsg.payload.forEach(row => {\n    let E = parseFloat(row.Energy_Wh);\n    if (!isNaN(E)) totalEnergy += E;\n});\nmsg.payload = parseFloat(totalEnergy.toFixed(2));\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 680,
+        "wires": [
+            [
+                "5ed7b509b492063a",
+                "612def336adbea4f"
+            ]
+        ]
+    },
+    {
+        "id": "8966e0744b95634e",
+        "type": "file",
+        "z": "ad532754904a6f93",
+        "name": "Layer Graph Data out",
+        "filename": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\layer-graph-data.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 2540,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e351136707d526cd",
+        "type": "file",
+        "z": "ad532754904a6f93",
+        "name": "Fixture Graph Data out",
+        "filename": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\fixture-graph-data.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f085584eb005a433",
+        "type": "file",
+        "z": "ad532754904a6f93",
+        "name": "Total Power Graph Data out",
+        "filename": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\total-power-graph-data.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2560,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "612def336adbea4f",
+        "type": "file",
+        "z": "ad532754904a6f93",
+        "name": "Total Energy Graph Data out",
+        "filename": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\total-energy-graph-data.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2560,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Consumo Energia",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Energia Show",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "be649bc627eac386",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-ui-table": "0.4.5"
+        }
+    }
+]

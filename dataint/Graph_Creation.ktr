@@ -449,11 +449,11 @@
   <order>
     <hop>
       <from>JSON input</from>
-      <to>Modified JavaScript value</to>
+      <to>Add Arguments</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Modified JavaScript value</from>
+      <from>Add Arguments</from>
       <to>Execute a process</to>
       <enabled>Y</enabled>
     </hop>
@@ -477,6 +477,9 @@
     <outputlinedelimiter/>
     <argumentsInFields>Y</argumentsInFields>
     <argumentFields>
+      <argumentField>
+        <argumentFieldName>file-path</argumentFieldName>
+      </argumentField>
     </argumentFields>
     <attributes/>
     <cluster_schema/>
@@ -590,8 +593,8 @@
     </GUI>
   </step>
   <step>
-    <name>Modified JavaScript value</name>
-    <type>ScriptValueMod</type>
+    <name>Add Arguments</name>
+    <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -600,90 +603,32 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>// Detecta o sistema operativo
-var osName = java.lang.System.getProperty("os.name").toLowerCase();
-
-var varName = getVariable("Internal.Entry.Current.Directory", "");
-
-// Nome do ficheiro Python
-var fileName = "graph_generator.py";
-
-// Monta o comando conforme o sistema operativo
-var command;
-
-if (osName.indexOf("win") >= 0) {
-    // Windows (CMD)
-    command = 'python "%' + varName + '%\\' + fileName + '"';
-} else {
-    // Linux / macOS (bash)
-    command = 'python "$' + varName + '/' + fileName + '"';
-}
-
-// Retorna a string final
-command;
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
     <fields>
       <field>
         <name>command</name>
-        <rename>command</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>256</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Generate rows</name>
-    <type>RowGenerator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>caminho</name>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <nullif>${Internal.Entry.Current.Directory}</nullif>
+        <nullif>python</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>file-path</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>H:\LESI\ISI\tp01-27967\scripts\graph_generator.py</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-    <limit>10</limit>
-    <never_ending>N</never_ending>
-    <interval_in_ms>5000</interval_in_ms>
-    <row_time_field>now</row_time_field>
-    <last_time_field>FiveSecondsAgo</last_time_field>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -693,8 +638,8 @@ command;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>192</yloc>
+      <xloc>240</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>TP1</name>
+    <name>Get_CueData_From_XML</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -430,7 +431,7 @@
     <created_date>2025/10/08 14:29:58.534</created_date>
     <modified_user>-</modified_user>
     <modified_date>2025/10/08 14:29:58.534</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -438,25 +439,99 @@
   <order>
     <hop>
       <from>Get data from XML</from>
-      <to>Select values</to>
+      <to>Remove Unnecessary Fields</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
+      <from>Get data from XML</from>
+      <to>Select Unique Cue Numbers</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove Unnecessary Fields</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select Unique Cue Numbers</from>
       <to>Modified JavaScript value</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Modified JavaScript value</from>
-      <to>Text file output</to>
+      <to>Export Cue Times</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Modified JavaScript value</from>
+      <to>Select CueNumber and Times</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select CueNumber and Times</from>
+      <to>Stream lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup</from>
+      <to>Export Cue Data</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Stream lookup</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Stream lookup</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>AttributeName</leftvalue>
+        <function>=</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>DIM</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask/>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Get data from XML</name>
     <type>getXMLData</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -477,7 +552,12 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${Internal.Entry.Current.Directory}/cuelist.xml</name>
+      <name>${Internal.Entry.Current.Directory}/../data/input/marat-sade.xml</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -486,7 +566,7 @@
     <fields>
       <field>
         <name>CueNumber</name>
-        <xpath>*[local-name()='Number']/@number</xpath>
+        <xpath>../../*[local-name()='Number']/@number</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>None</type>
@@ -501,7 +581,7 @@
       </field>
       <field>
         <name>SubNumber</name>
-        <xpath>*[local-name()='Number']/@sub_number</xpath>
+        <xpath>../../*[local-name()='Number']/@sub_number</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>None</type>
@@ -516,7 +596,7 @@
       </field>
       <field>
         <name>ChannelID</name>
-        <xpath>*[local-name()='CueDatas']/*[local-name()='CueData']/*[local-name()='Channel']/@channel_id</xpath>
+        <xpath>*[local-name()='Channel']/@channel_id</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>None</type>
@@ -531,7 +611,7 @@
       </field>
       <field>
         <name>FixtureID</name>
-        <xpath>*[local-name()='CueDatas']/*[local-name()='CueData']/*[local-name()='Channel']/@fixture_id</xpath>
+        <xpath>*[local-name()='Channel']/@fixture_id</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>None</type>
@@ -546,7 +626,7 @@
       </field>
       <field>
         <name>AttributeName</name>
-        <xpath>*[local-name()='CueDatas']/*[local-name()='CueData']/*[local-name()='Channel']/@attribute_name</xpath>
+        <xpath>*[local-name()='Channel']/@attribute_name</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>None</type>
@@ -561,7 +641,7 @@
       </field>
       <field>
         <name>Value</name>
-        <xpath>*[local-name()='CueDatas']/*[local-name()='CueData']/*[local-name()='Value']</xpath>
+        <xpath>*[local-name()='Value']/text()</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>None</type>
@@ -628,8 +708,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>192</yloc>
+      <xloc>112</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -637,7 +717,7 @@
     <name>Modified JavaScript value</name>
     <type>ScriptValueMod</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -650,19 +730,19 @@
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-// Gera número aleatório entre 10 e 120
-var IntervaloEntreCues = Math.floor(Math.random() * (120 - 10 + 1)) + 10;
-
-// Converte para formato mm:ss
-var minutos = Math.floor(IntervaloEntreCues / 60);
-var segundos = IntervaloEntreCues % 60;
-var IntervaloFormatado = (minutos &lt; 10 ? "0" + minutos : minutos) + ":" + (segundos &lt; 10 ? "0" + segundos : segundos);
-
-</jsScript_script>
+        <jsScript_script>var betweenCuesTime = Math.floor(Math.random() * (420 - 10 + 1)) + 10;</jsScript_script>
       </jsScript>
     </jsScripts>
-    <fields>    </fields>
+    <fields>
+      <field>
+        <name>betweenCuesTime</name>
+        <rename>betweenCuesTime</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>0</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -672,13 +752,13 @@ var IntervaloFormatado = (minutos &lt; 10 ? "0" + minutos : minutos) + ":" + (se
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>208</yloc>
+      <xloc>304</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
+    <name>Remove Unnecessary Fields</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -690,23 +770,15 @@ var IntervaloFormatado = (minutos &lt; 10 ? "0" + minutos : minutos) + ":" + (se
     </partitioning>
     <fields>
       <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>Value</name>
-        <rename>Value</rename>
-        <type>Number</type>
-        <length>-2</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
+      <remove>
+        <name>SubNumber</name>
+      </remove>
+      <remove>
+        <name>CuePartIndex</name>
+      </remove>
+      <remove>
+        <name>CuePartName</name>
+      </remove>
       <meta>
         <name>CueNumber</name>
         <rename>CueNumber</rename>
@@ -768,13 +840,124 @@ var IntervaloFormatado = (minutos &lt; 10 ? "0" + minutos : minutos) + ":" + (se
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>208</yloc>
+      <xloc>256</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
+    <name>Select CueNumber and Times</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>CueNumber</name>
+      </field>
+      <field>
+        <name>betweenCuesTime</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select Unique Cue Numbers</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_rows>N</count_rows>
+    <count_field/>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>CueNumber</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>Select CueNumber and Times</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>CueNumber</name>
+        <field>CueNumber</field>
+      </key>
+      <value>
+        <name>betweenCuesTime</name>
+        <rename>betweenCuesTime</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Export Cue Times</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -798,7 +981,7 @@ var IntervaloFormatado = (minutos &lt; 10 ? "0" + minutos : minutos) + ":" + (se
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${Internal.Entry.Current.Directory}/export</name>
+      <name>${Internal.Entry.Current.Directory}/../data/output/cueTimes</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>txt</extention>
@@ -815,6 +998,30 @@ var IntervaloFormatado = (minutos &lt; 10 ? "0" + minutos : minutos) + ":" + (se
       <splitevery/>
     </file>
     <fields>
+      <field>
+        <name>CueNumber</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>0</precision>
+      </field>
+      <field>
+        <name>betweenCuesTime</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>0</precision>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -825,8 +1032,137 @@ var IntervaloFormatado = (minutos &lt; 10 ? "0" + minutos : minutos) + ":" + (se
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>208</yloc>
+      <xloc>464</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Export Cue Data</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${Internal.Entry.Current.Directory}/../data/output/cueData</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>txt</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>CueNumber</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>0</precision>
+      </field>
+      <field>
+        <name>ChannelID</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>0</precision>
+      </field>
+      <field>
+        <name>FixtureID</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>0</precision>
+      </field>
+      <field>
+        <name>AttributeName</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Value</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>betweenCuesTime</name>
+        <type>Number</type>
+        <format>####0.0#########;-####0.0#########</format>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>16</length>
+        <precision>0</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

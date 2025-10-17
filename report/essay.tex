@@ -1,84 +1,384 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[portuguese]{babel}
-\usepackage{amsmath}
-\usepackage{verbatim}
-\usepackage{hyperref}
-\usepackage{geometry}
-\geometry{a4paper, margin=1in}
-\usepackage{longtable} % Para tabelas longas
+% Este é um Relatório Técnico gerado em LaTeX (PT-PT)
+% O template utiliza a configuração Palatino (mathpazo) e estrutura do ficheiro essay.tex.
 
-\title{Relatório Técnico Final: Sistema de Monitorização e Controlo de Consumo de Energia}
-\author{Gerado por Gemini com base em ficheiros de configuração, dados e transformações ETL}
-\date{\today}
+% --- PREÂMBULO E DEFINIÇÕES DO TEMPLATE (Baseado em essay.tex) ---
+\documentclass[a4paper, 12pt]{article}
+\usepackage[portuguese]{babel}
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{pdflscape} %Allows landscape oriented pages
+\usepackage{float}
+\usepackage{booktabs} % Para tabelas de qualidade
+
+% PACOTE ESSENCIAL PARA COMANDOS MATEMÁTICOS COMO \text
+\usepackage{amsmath}
+
+\usepackage{hyperref}%Required for hyperlink references
+\hypersetup{
+	colorlinks=true, % Ativa links coloridos em vez de caixas ao redor
+	linkcolor=black, % Cor dos links internos
+	citecolor=black, % Cor das citações
+	urlcolor=black   % Cor dos links externos
+}
+
+\usepackage{mathpazo} % Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Line spacing
+
+% Estilo para snippets de código/logs/ficheiros XML
+\usepackage{fancyvrb}
+% Os comandos de título de Verbatim não são standard e foram removidos para garantir a compilação.
+% Definir o ambiente 'KettleCode' como Verbatim, com tamanho de letra pequeno.
+\DefineVerbatimEnvironment{KettleCode}{Verbatim}{fontsize=\small}
+
+% Simplificação da macro \maketitle para o relatório técnico
+\makeatletter
+\renewcommand{\maketitle}{
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{1cm}
+			{\Huge\textbf{Trabalho Prático Integração de Sistemas Informáticos}}\\[0.5cm] % Main Title
+			{\Large Análise de Consumo Energético de Iluminação}\\[2cm] % Subtitle
+			{\large \textsc{Documentação Técnica e Guia de Utilização}}\\[0.5cm]
+			{\large \textbf{José António da Cunha Alves (nº27967)}}\\[0.5cm] % Autor
+			{\textit{Instituto Politécnico do Cávado e do Ave}}\\[1.5cm] % Instituição
+			{\large \today} % Date
+			\vfill
+		\end{center}
+	\end{titlepage}
+}
+\makeatother
+% --- FIM DO PREÂMBULO ---
 
 \begin{document}
-	
 	\maketitle
+	\thispagestyle{empty} % Sem número de página na primeira página
 	
-	\begin{abstract}
-		Este relatório descreve a estrutura, as funcionalidades e as dependências de um sistema híbrido de processamento de dados e visualização, focado na monitorização e análise detalhada de consumo de energia (Potência e Energia). O sistema utiliza o \textbf{Pentaho Data Integration (PDI/Kettle)} para orquestração de transformações de dados (ETL), scripts \textbf{Python} (\texttt{pandas}, \texttt{matplotlib}) para a geração de gráficos e um dashboard Node-RED para a apresentação final.
-	\end{abstract}
+	\newpage
+	\renewcommand{\contentsname}{Índice}
+	\tableofcontents
 	
-	\section{Introdução}
+	\newpage
+	\renewcommand{\listfigurename}{Lista de Figuras}
+	\listoffigures
 	
-	O programa é um sistema de software concebido para monitorizar e apresentar dados detalhados de consumo de energia. A arquitetura mista utiliza o **Pentaho Data Integration (Kettle)** para a orquestração e o processamento ETL, enquanto os scripts Python são dedicados à fase final de visualização. O sistema rastreia o consumo a nível de \textbf{dimmer} e \textbf{fixture}, agregando os dados por **camada** (Layer).
+	\newpage
+	\section{Introdução e Glossário Técnico}
 	
-	\section{Transformações de Dados e Geração de Gráficos}
+	O presente relatório técnico descreve o fluxo de trabalho de \textbf{Extração, Transformação e Carregamento (ETL)} implementado no \textbf{Pentaho Data Integration (PDI)} (Kettle). O objetivo principal é calcular e analisar o consumo de energia ao longo de um espetáculo de teatro, a partir de dados programados numa mesa de controlo de iluminação.
 	
-	O pipeline de dados é dividido entre a orquestração do Kettle e a capacidade analítica do Python.
+	\subsection{Contexto Técnico de Iluminação}
 	
-	\subsection{Pentaho Kettle (Orquestração ETL)}
-	
-	O Kettle é a ferramenta central que gere o fluxo de trabalho dos dados:
+	Este projeto utiliza conceitos fundamentais da programação de luz para teatro:
 	
 	\begin{itemize}
-		\item \textbf{Cálculo de Consumo (\texttt{Calculate\_Power\_Consumption.ktr}):} Transforma dados brutos de consumo em valores de potência e energia.
-		\item \textbf{Geração de Gráficos (\texttt{Graph\_Creation.ktr}):} Esta transformação é crítica, pois chama o script Python (`graph\_generator.py`) para produzir os ficheiros de imagem (PNG) e os dados JSON/CSV finais para o Node-RED.
-		\item \textbf{Gestão (\texttt{Patch\_Import.ktr} e \texttt{SendEmail.ktr}):} Transforma e gere o sistema (importação de patches) e a comunicação (envio de email).
+		\item \textbf{grandMA2:} É um sistema de controlo de iluminação profissional (mesa de luz). Permite ao designer programar e guardar o estado da luz no espetáculo.
+		\item \textbf{Cue (Deixa):} É um estado de luz guardado. Uma \textit{Sequence} é uma lista ordenada de \textit{Cues} que define o espetáculo. O sistema de ETL calcula o consumo de energia durante o tempo de duração de cada \textit{Cue}.
 	\end{itemize}
 	
-	\subsection{Script Python de Geração de Gráficos (\texttt{graph\_generator.py})}
+	\subsubsection{Equipamentos de Iluminação}
+	Os projetores são classificados em duas categorias principais, essenciais para o cálculo do consumo:
+	\begin{itemize}
+		\item \textbf{Dimmers / Projetores Convencionais:} Equipamentos de luz simples (e.g., lâmpadas de halogéneo) cuja intensidade é controlada diretamente através de um \textbf{dimmer} (variador de intensidade). São controlados por um único valor de intensidade ($\text{0}\%$ a $\text{100}\%$) e têm uma potência fixa.
+		\item \textbf{Fixtures (Projetores Inteligentes):} Equipamentos de luz modernos (e.g., \textit{Moving Light}s ou \textit{LEDs}). Estes são controlados por múltiplos parâmetros (cor, posição, zoom, etc) e têm um consumo de potência que pode variar consoante a função ativa. Nesta primeira fase do projeto, vamos considerar apenas o consumo do atributo de \textit{dimmer}, ou seja, a intensidade da luz.
+	\end{itemize}
 	
-	O ficheiro \texttt{graph\_generator.py} é o script Python que materializa os dados processados em visualizações, sendo executado pela transformação Kettle \texttt{Graph\_Creation.ktr}. Este script utiliza as bibliotecas \texttt{matplotlib} e \texttt{pandas} (como definido em `requirements.txt`) para:
+	\subsection{Dados de Origem e Fluxo de Processamento}
 	
+	O Kettle recebe dois tipos de ficheiros exportados da grandMA2:
+	\begin{itemize}
+		\item \textbf{Cue Data (XML):} Contém a intensidade de controlo (valor DMX, $\text{0}$ a $\text{255}$) para cada aparelho de luz (todos os seus atributos) em cada \textit{Cue}, juntamente com os tempos de transição.
+	\item \textbf{Patch Data (CSV):} Ficheiros de *patch* exportados da grandMA2 que contêm a informação de mapeamento de cada aparelho: ID (Fixture/Channel), \textit{FixtureType}, nome e a que \textit{Layer} (camada de iluminação) pertence. \textbf{Não contêm dados de potência.}
+	\item \textbf{Power Consumption Data (\texttt{power\_consumption.csv}):} Ficheiro criado externamente que contém a informação da \textbf{Potência Máxima} em Watts associada a cada \textit{FixtureType} ou \textit{Channel ID} (para Dimmers), permitindo realizar o cálculo de consumo.
+	\end{itemize}
+	
+	O fluxo de ETL processa esta informação em cadeia:
 	\begin{enumerate}
-		\item Ler os dados processados de consumo (provavelmente no formato CSV ou JSON).
-		\item Criar o **Gráfico de Barras** para a Potência por Camada (\texttt{layer\_bar\_graph.png}).
-		\item Criar o **Gráfico Circular** para a distribuição do consumo por camada (\texttt{layer\_pie\_graph.png}).
-		\item Exportar os dados de série temporal para o dashboard (e.g., \texttt{total-power-graph-data.json/csv}, \texttt{total-energy-graph-data.json/csv}).
+		\item Combina \textit{Cue Data} com \textit{Patch Data} e \textit{Max Power}.
+		\item Calcula a Potência Instantânea ($P_{\text{inst}}$) e a Energia ($\text{Wh}$) consumida em cada momento do espetáculo.
+		\item Os resultados são usados para gerar gráficos (via Python/Node-RED) e distribuídos por e-mail.
 	\end{enumerate}
 	
-	\section{Visualizações do Dashboard (Node-RED)}
+	\section{Pré-requisitos e Instalação de Dependências}
+	Para que o projeto funcione corretamente, é necessário configurar os ambientes Python (para geração de gráficos) e Node-RED (para visualização dos resultados).
 	
-	O dashboard apresenta as seguintes visualizações, que são o output direto do pipeline ETL/Python:
+	\subsection{1. Instalação de Bibliotecas Python}
+	A transformação \texttt{Graph\_Creation.ktr} executa um script Python (\texttt{graph\_generator.py}). Este script requer bibliotecas específicas para manipulação e visualização de dados.
 	
 	\begin{itemize}
-		\item **Gráficos por Camada:** Gráfico de Barras e Gráfico Circular.
-		\item **Gráficos de Séries Temporais:** Potência Total e Energia Total.
-		\item **Gráfico de Barras Node-RED:** Visualização dedicada ``Power Used by Layer''.
+		\item \textbf{Dependências:} As bibliotecas necessárias estão no ficheiro \texttt{requirements.txt} (Pandas e Matplotlib).
+		\item \textbf{Comando de Instalação:} Utilize o \texttt{pip} para instalar as dependências.
 	\end{itemize}
+	Comando a executar no terminal:
+	\begin{KettleCode}
+		pip install -r requirements.txt
+	\end{KettleCode}
+	O conteúdo do ficheiro \texttt{requirements.txt} é:
+	\begin{KettleCode}
+		pandas>=2.0
+		matplotlib>=3.7
+	\end{KettleCode}
 	
-	\section{Dependências e Instalação}
-	
-	\subsection{Dependências Essenciais}
-	
+	\subsection{2. Instalação de Palettes Node-RED}
+	O Node-RED é utilizado para criar \textbf{dashboards} de visualização dos dados de consumo calculados pelo Kettle. É necessário instalar as seguintes \textbf{palettes} na interface de gestão do Node-RED:
 	\begin{itemize}
-		\item **ETL/Orquestração:** Pentaho Data Integration (Kettle) para executar os ficheiros \texttt{.ktr} e \texttt{.kjb}.
-		\item **Visualização Python:**
+		\item \textbf{Dashboard (Base):} 
 		\begin{itemize}
-			\item \textbf{pandas:} Versão $\ge 2.0$ (para manipulação de dados).
-			\item \textbf{matplotlib:} Versão $\ge 3.7$ (para geração de gráficos).
+			\item \texttt{node-red-dashboard}
+			\item \texttt{@flowfuse/node-red-dashboard}
 		\end{itemize}
-		\item **Dashboard:** \textbf{node-red-dashboard} na versão \texttt{3.6.6}.
+		\item \textbf{Visualização de Dados (Tabela):} 
+		\begin{itemize}
+			\item \texttt{node-red-node-ui-table}
+		\end{itemize}
 	\end{itemize}
 	
-	\subsection{Instruções de Instalação}
 	
-	As bibliotecas Python devem ser instaladas através do comando:
+	\section{Fluxo do Ficheiro Job Principal (\texttt{a27967.kjb})}
 	
-	\begin{verbatim}
-		python -m pip install matplotlib pandas
-	\end{verbatim}
+	O ficheiro \texttt{a27967.kjb} define a sequência lógica do processamento, garantindo que as transformações sejam executadas na ordem correta, dependendo umas das outras.
+	
+	\begin{figure}[h!]
+		\centering
+		\framebox{\parbox{0.9\textwidth}{\centering
+				\vspace{1cm}
+				\textbf{Esquema do Job Principal (\texttt{a27967.kjb})} \\
+				\textit{Representação da Sequência de Execução (Job Entry)}\\
+				\texttt{Start} $\rightarrow$ \texttt{Patch Import (TRANS)} $\rightarrow$ \texttt{CueData Import (TRANS)} $\rightarrow$ \texttt{Calculate Power Consumption (TRANS)} $\rightarrow$ \texttt{Graph\_Generator (TRANS)} $\rightarrow$ \texttt{Send Email (TRANS)}
+				\vspace{1cm}
+		}}
+		\caption{Fluxo de controlo principal definido no Job (\texttt{a27967.kjb}), que ilustra a sequência completa de ETL e Gera o Relatório.}
+		\label{fig:job_flow}
+	\end{figure}
+	
+	Este fluxo garante que:
+	\begin{itemize}
+		\item Os dados de \textit{patch} e potência são importados.
+		\item Os dados das \textit{cues} (intensidades e tempos) são extraídos.
+		\item O cálculo de consumo é realizado.
+		\item Os gráficos são gerados e, finalmente, o relatório é enviado por e-mail.
+	\end{itemize}
+	
+	\section{Descrição Detalhada das Transformações}
+	
+	\subsection{1. \texttt{Get\_CueData\_From\_XML.ktr} (Extração ds Dados exportados pela grandMA2)}
+	Esta transformação é responsável por extrair os níveis de intensidade (DIM) e os tempos de cada \textit{cue} a partir do ficheiro XML exportado da grandMA2 (\texttt{marat-sade.xml}). Nesta fase, ainda desprezamos os tempos de \textit{fade} de cada \textit{cue}, assumindo que os valores são o máximo ao longo de toda a cue.
+	
+	\begin{itemize}
+		\item \textbf{Passo Chave:} \textit{Get data from XML}.
+		\item \textbf{Lógica:} A transformação itera sobre os elementos XML que contêm a informação dos canais/fixtures por \textit{cue}.
+		\item \textbf{Extração de Tempo:} Para simular o tempo entre \textit{cues}, o passo \textit{Modified JavaScript value} gera um valor aleatório (entre $\text{10}$ e $\text{420}$ segundos), que é associado a cada \textit{CueNumber} e usado para calcular a energia.
+	\end{itemize}
+	
+	O snippet do JavaScript para simular o tempo entre \textit{cues} é:
+	\begin{KettleCode}
+		// Gera um valor aleatório (em segundos) para simular o tempo entre Cues.
+		var betweenCuesTime = Math.floor(Math.random() * (420 - 10 + 1)) + 10;
+	\end{KettleCode}
+	
+	\begin{figure}[h!]
+		\centering
+		\framebox{\parbox{0.9\textwidth}{\centering
+				\vspace{1cm}
+				\textbf{Esquema da Transformação \texttt{Get\_CueData\_From\_XML.ktr}} \\
+				\textit{Fluxo de Extração XML e Atribuição de Tempo Simulada}\\
+				\texttt{Get data from XML} $\rightarrow$ \texttt{Remove Unnecessary Fields} $\rightarrow$ \texttt{Filter rows (DIM only)} $\rightarrow$ \texttt{Stream lookup (Cue Times)} $\rightarrow$ \texttt{Export Cue Data}\\[0.2cm]
+				\texttt{Get data from XML} $\rightarrow$ \texttt{Select Unique Cue Numbers} $\rightarrow$ \texttt{Modified JavaScript value (Random Time)} $\rightarrow$ \texttt{Select CueNumber and Times} $\rightarrow$ \texttt{Stream lookup}
+				\vspace{1cm}
+		}}
+		\caption{Esquema lógico da transformação de extração de dados da grandMA2 e anotação de tempo simulado entre \textit{cues}.}
+		\label{fig:get_cuedata_flow}
+	\end{figure}
+	\newpage
+	
+	\subsection{2. \texttt{Patch\_Import.ktr} (Importação de Patch e Potência)}
+	Esta transformação prepara os dados de \textit{patch} e associa a potência máxima de cada equipamento.
+	
+	\begin{figure}[h!]
+		\centering
+		\framebox{\parbox{0.9\textwidth}{\centering
+				\vspace{1cm}
+				\textbf{Esquema da Transformação \texttt{Patch\_Import.ktr}} \\
+				\textit{Fluxo de Importação, Filtragem e Junção (Merge Join)}\\
+				\texttt{PatchFiles' Names} $\rightarrow$ \texttt{Patch CSV Input} $\rightarrow$ \texttt{Remove Unnecessary Fields} $\rightarrow$ \texttt{Filter Fixtures (Fix\_ID IS NOT NULL/Ch\_ID IS NOT NULL)} \\
+				\textit{Ramo 1 (Fixtures):} \texttt{Filter Fixtures (TRUE)} $\rightarrow$ \texttt{Sort Fixture Rows (by FixtureType)} $\rightarrow$ \texttt{Join Fixtures (by FixtureType)} $\leftarrow$ \texttt{Sort Fixture Power rows (by FixtureType)} $\rightarrow$ \texttt{Fixtures\_Export} \\
+				\textit{Ramo 2 (Dimmers):} \texttt{Filter Fixtures (FALSE)} $\rightarrow$ \texttt{Sort Channel Rows (by Ch\_ID)} $\rightarrow$ \texttt{Join Dimmers (by Ch\_ID)} $\leftarrow$ \texttt{Sort Dimmer Power rows (by ChannelID)} $\rightarrow$ \texttt{DIM\_Export}
+				\vspace{1cm}
+		}}
+		\caption{Esquema lógico da importação e separação de dados de Patch e Potência para Fixtures e Dimmers, utilizando \textit{Merge Join}.}
+		\label{fig:patch_flow}
+	\end{figure}
+	
+	\newpage
+	
+	\begin{itemize}
+		\item \textbf{Origem dos Dados:} Lê o \texttt{patchfiles.csv} para obter a lista de ficheiros de patch (e.g., \texttt{ALCOVAS LAT\_t.csv}) e o \texttt{power\_consumption.csv} para obter os valores de \textit{MaxPower}.
+		\item \textbf{Divisão e Junção:} As linhas de \textit{patch} são divididas em Fixtures (com \texttt{Fix\_ID}) e Dimmers (com \texttt{Ch\_ID}). Em seguida, são utilizados passos \textit{Merge Join} para associar o \textit{MaxPower} (do ficheiro de consumo) por \textit{FixtureType} ou \textit{ChannelID}, consoante o tipo de equipamento.
+		\item \textbf{Resultados:} Gera \texttt{fixtures\_export.txt} e \texttt{dim\_export.txt}.
+	\end{itemize}
+	
+	\subsection{3. \texttt{Calculate\_Power\_Consumption.ktr} (Cálculo de Consumo)}
+	Esta é a transformação de cálculo central.
+	
+	\begin{itemize}
+		\item \textbf{Entrada:} Recebe o \textit{CueData} (intensidade DMX e tempo entre \textit{cues}) e os dados de Patch/Potência (\textit{MaxPower}, \textit{Layer}) gerados na transformação anterior.
+		\item \textbf{Passo Chave:} \textit{Stream Lookup} e \textit{Modified JavaScript value}.
+		\item \textbf{Lógica de Lookup:} Associa o \textit{MaxPower} e o \textit{Layer} a cada linha de \textit{CueData} (Stream Lookup, usando \textit{FixtureID} ou \textit{ChannelID}).
+		\item \textbf{Lógica de Cálculo:} O passo \textit{Modified JavaScript value} executa o cálculo de Potência e Energia:
+	\end{itemize}
+	
+	Snippet do JavaScript para cálculo de Potência e Energia:
+	\begin{KettleCode}
+		// Normaliza a intensidade: converte valor DMX (0-255) para percentagem (0-1)
+		var val = parseFloat(Value);
+		if (val > 1) val = val / 255;  
+		
+		// Calcula o Consumo Instantâneo de Potência (Potência em Watts)
+		// P = Intensidade Normalizada * Potência Máxima
+		var P = val * parseFloat(MaxPower);
+		
+		// Calcula a Energia (Dur é o tempo entre cues, em segundos)
+		var dur = parseFloat(betweenCuesTime);
+		var E_J = P * dur; // Energia em Joules
+		var E_Wh = E_J / 3600; // Energia em Watt-hora (Wh)
+		
+		// Arredonda para duas casas decimais e define os campos de saída
+		PowerUsed = Math.round(P * 100) / 100;
+		Energy_J  = Math.round(E_J * 100) / 100;
+		Energy_Wh = Math.round(E_Wh * 100) / 100;
+	\end{KettleCode}
+	\begin{itemize}
+		\item \textbf{Saída:} Cria os ficheiros \texttt{fixture\_consumption.csv} e \texttt{dimmer\_consumption.csv}.
+	\end{itemize}
+	
+	\subsection{4. \texttt{Graph\_Creation.ktr} (Geração de Gráficos)}
+	Esta transformação é responsável por processar os dados de consumo agregados e acionar a geração de gráficos.
+	
+	\begin{itemize}
+		\item \textbf{Passo Chave:} \textit{Execute a process}.
+		\item \textbf{Lógica:} O comando de execução do Python é montado, sendo o caminho do script Python passado como um \textbf{argumento fixo} para o processo.
+	\end{itemize}
+	
+	\subsubsection{Configuração de Caminho Absoluto do Script Python}
+	Apesar dos esforços para usar variáveis de ambiente do Kettle
+	\newline (\texttt{\${Internal.Entry.Current.Directory}} ou \texttt{\${PYTHON\_DIR}}) para garantir a portabilidade do caminho do script, o passo \texttt{Execute a process} do Kettle, em alguns ambientes, requer que o caminho do script \textit{Python} seja definido como um \textbf{caminho absoluto e fixo} para ser executado corretamente.
+	
+	Esta necessidade de caminho absoluto compromete a portabilidade imediata do projeto, sendo este um ponto crítico de configuração.
+	
+	\begin{itemize}
+		\item \textbf{Nodo a Editar:} \texttt{Add Arguments} (dentro de \texttt{Graph\_Creation.ktr}).
+		\item \textbf{Campo a Atualizar:} O campo \texttt{file-path} deve ser editado, substituindo o caminho atual
+		\newline (e.g., \texttt{H:\textbackslash LESI\textbackslash ISI\textbackslash tp01-27967\textbackslash scripts\textbackslash graph\_generator.py}) pelo caminho absoluto do \texttt{graph\_generator.py} no ambiente de execução.
+	\end{itemize}
+	
+	O valor configurado atualmente no passo \texttt{Add Arguments} é:
+	\begin{KettleCode}
+		H:\LESI\ISI\tp01-27967\scripts\graph_generator.py
+	\end{KettleCode}
+	Este valor deve ser substituído pelo caminho local.
+	
+	\subsection{5. \texttt{SendEmail.ktr} (Envio de Relatório)}
+	Esta transformação trata do envio dos resultados por e-mail.
+	
+	\begin{figure}[h!]
+		\centering
+		\framebox{\parbox{0.9\textwidth}{\centering
+				\vspace{1cm}
+				\textbf{Configuração do Passo de E-mail (\texttt{SendEmail.ktr})} \\
+				\textit{Fluxo e Configurações Chave}\\
+				\texttt{Get file names} $\rightarrow$ \texttt{Add constants} $\rightarrow$ \texttt{Mail} \\
+				\textbf{Servidor SMTP:} \texttt{smtp.gmail.com} \\
+				\textbf{Porta:} \texttt{587 (TLS)} \\
+				\textbf{Autenticação:} Sim (\texttt{vizzy.community@gmail.com}) \\
+				\textbf{Anexos:} Ficheiros \texttt{*.png} da pasta \texttt{data/output/graphs}
+				\vspace{1cm}
+		}}
+		\caption{Esquema da transformação de envio de e-mail, que recolhe os gráficos e os distribui de forma segura.}
+		\label{fig:email_config}
+	\end{figure}
+
+	
+	\begin{itemize}
+		\item \textbf{Função:} Recolhe os gráficos (\texttt{*.png}) gerados e envia-os como anexos.
+		\item \textbf{Segurança:} Requer a utilização de autenticação (TLS ou SSL) e credenciais válidas do servidor de e-mail (por exemplo, uma \textit{app password} para contas Gmail ou Office 365).
+	\end{itemize}
+	
+	\section{Fluxo de Visualização Node-RED}
+	
+	O Node-RED é utilizado para fornecer uma visualização imediata dos dados de consumo gerados pelo Kettle, através de um \textbf{dashboard} interativo. O fluxo (\texttt{node-red-graph-generator.json}) é composto por uma sequência de nós que lê, processa e apresenta os dados.
+	
+	\subsection{Configuração de Caminhos e Ficheiros}
+	O fluxo do Node-RED utiliza nós \texttt{file in} e \texttt{inject} para ler os ficheiros CSV gerados pelo Kettle. Estes nós foram configurados com caminhos fixos (\textbf{absolutos}), o que requer uma \textbf{configuração manual} por parte do utilizador.
+	
+	\begin{itemize}
+		\item \textbf{Caminho Base:} O caminho absoluto atual é \texttt{H:\textbackslash LESI\textbackslash ISI\textbackslash tp01-27967\textbackslash data\textbackslash output\textbackslash}.
+		\item \textbf{Caminho a Substituir:} O utilizador deve substituir a porção do caminho que aponta para a pasta do projeto (\texttt{H:\textbackslash LESI\textbackslash ISI\textbackslash tp01-27967}) pelo caminho local onde o projeto está guardado.
+	\end{itemize}
+	
+	Os nós que requerem esta atualização são os nós \texttt{inject} (\texttt{Load Fixture CSV} e \texttt{Load Dimmer CSV}) e os nós \texttt{file} de saída. Por exemplo, o caminho:
+	\begin{KettleCode}
+		H:\LESI\ISI\tp01-27967\data\output\fixture_consumption.csv
+	\end{KettleCode}
+	deve ter a parte \texttt{H:\textbackslash LESI\textbackslash ISI\textbackslash tp01-27967} substituída pelo \textit{path} local do novo utilizador.
+	
+	\subsection{Visão Geral do Fluxo Node-RED}
+	
+	O fluxo Node-RED desempenha as seguintes tarefas principais:
+	\begin{enumerate}
+		\item \textbf{Leitura e Injeção:} Utiliza nós \texttt{inject} para carregar manualmente os ficheiros \texttt{fixture\_consumption.csv} e \texttt{dimmer\_consumption.csv}.
+		\item \textbf{Parsing e Conversão:} Os dados CSV lidos são convertidos em \textbf{arrays} de objetos JavaScript (nós \texttt{function}).
+		\item \textbf{Junção e Achatamento (Flatten):} Os dados de \textbf{Fixtures} e \textbf{Dimmers} são unidos (nó \texttt{join}) e convertidos numa lista única (nó \texttt{Flatten Arrays}).
+		\item \textbf{Agregação e Transformação de Gráficos:} Os dados são agregados por \textit{Layer} e \textit{FixtureType}, e formatados para diferentes tipos de gráficos (Barras, Circular) e Tabelas.
+		\item \textbf{Cálculo Total:} É calculada a \textit{Total Power Usage} e \textit{Total Energy Usage} para apresentar em indicadores (\textit{gauges}).
+		\item \textbf{Visualização e Saída de Dados:} Os dados são apresentados no \textbf{dashboard} (nós \texttt{ui\_chart}, \texttt{ui\_table}, \texttt{ui\_gauge}) e, em paralelo, os dados agregados para os gráficos são exportados como JSON (nós \texttt{file}) para uso futuro ou persistência (e.g., \texttt{layer-graph-data.json}).
+	\end{enumerate}
+	
+	\subsection{Esquema de Agregação de Dados (Node-RED)}
+	Os nós \texttt{function} para agregação (e.g., \texttt{Aggregate Power by Layer}) são cruciais, pois transformam o fluxo de dados plano (por \textit{Cue}/aparelho) numa estrutura sumarizada que é adequada para gráficos.
+	
+	Snippet do JavaScript para \texttt{Aggregate Power by Layer}:
+	\begin{KettleCode}
+		let data = {};
+		msg.payload.forEach(row => {
+			let layer = row.Layer || 'Unknown';
+			// Soma o PowerUsed de todas as linhas por camada
+			data[layer] = (data[layer] || 0) + parseFloat(row.PowerUsed || 0);
+		});
+		
+		msg.payload = [{
+			series: ["PowerUsed"],
+			data: [ Object.values(data) ],
+			labels: Object.keys(data)
+		}];
+		
+		return msg;
+	\end{KettleCode}
+	
+	\subsection{Componentes de Visualização (Dashboard)}
+	O \textbf{dashboard} é estruturado para apresentar os principais indicadores:
+	\begin{itemize}
+		\item \textbf{Gráficos de Barras e Circulares:} Apresentam a distribuição do consumo (Watts) por \textit{Layer} e por \textit{Fixture Type}.
+		\item \textbf{Tabelas (\texttt{ui\_table}):} Exibem os dados agregados em formato tabular, facilitando a consulta de valores específicos.
+		\item \textbf{Indicadores (\texttt{ui\_gauge}):} Mostram o consumo total de Potência (Watts) e Energia (Watt-hora) de forma visual.
+	\end{itemize}
+	
+	\section{Conclusão e Trabalhos Futuros}
+	
+	O projeto demonstrou com sucesso a aplicação de um pipeline de ETL utilizando o Pentaho Data Integration para processar dados heterogéneos (XML, CSV) provenientes de um sistema de controlo de iluminação profissional (grandMA2). O fluxo de trabalho alcançou o objetivo de calcular o consumo de energia instantâneo e total por aparelho e por camada (Layer) de iluminação, culminando na geração automatizada de relatórios visuais (Python/Node-RED) e na distribuição por e-mail.
+	
+	\subsection{Limitações e Melhorias Futuras}
+	
+	A principal limitação atual reside na precisão temporal do cálculo de consumo e na dependência de caminhos de ficheiros fixos:
+	\begin{itemize}
+		\item \textbf{Tempo de Cue Simulada:} O tempo de duração entre \textit{cues} é atualmente um valor aleatório (simulado), o que torna o cálculo da energia ($\text{Wh}$) aproximado.
+		\item \textbf{Falta de Portabilidade:} A necessidade de codificar caminhos absolutos (no Kettle e Node-RED) compromete a portabilidade "plug-and-play" do projeto.
+	\end{itemize}
+	
+	Para endereçar estas limitações, o principal trabalho futuro sugerido é:
+	\begin{itemize}
+		\item \textbf{Implementação de Logger em LUA/Python na grandMA2:} Desenvolver um \textbf{plugin} ou \textbf{macro} dentro da consola grandMA2 que corra em tempo real durante o espetáculo. Este \textit{plugin} faria um \textit{log} do \textit{timestamp} da mesa (utilizando o relógio interno da grandMA2) cada vez que é dado um "Go" (mudança de \textit{cue}). A exportação deste \textit{log} permitiria ao Kettle utilizar os \textbf{tempos de transição reais}, substituindo o valor aleatório simulado e garantindo a máxima precisão no cálculo de consumo energético total.
+	\end{itemize}
 	
 \end{document}
