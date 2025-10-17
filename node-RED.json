@@ -1,0 +1,68 @@
+[
+    {
+        "id": "de2134e4c33e7174",
+        "type": "ui_chart",
+        "z": "ad532754904a6f93",
+        "name": "Power by Layer",
+        "group": "dashboard_group",
+        "order": 1,
+        "width": 6,
+        "height": 4,
+        "label": "Power Used by Layer",
+        "chartType": "bar",
+        "xformat": "auto",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "",
+        "removeOlderPoints": "",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1680,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Consumo Energia",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Energia Show",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "5c812e931142ffae",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

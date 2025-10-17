@@ -483,12 +483,12 @@
     </hop>
     <hop>
       <from>Calculate Power Consumption per Cue Fixtures</from>
-      <to>Text file output</to>
+      <to>Fixture Comsumption File Output</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Calculate Power Consumption per Cue Dimmer</from>
-      <to>Text file output 2</to>
+      <to>Dimmer Comsumption File Output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -509,24 +509,28 @@
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>// Normalize Intensity
+        <jsScript_script>// ===========================================
+// Calculate Power and Energy per Cue
+// Input fields: Value, MaxPower, betweenCuesTime
+// Output fields: PowerUsed, Energy_J, Energy_Wh
+// ===========================================
+
+// Normalize intensity
 var val = parseFloat(Value);
 if (val > 1) val = val / 255;  // converte 0–255 → 0–1
 
-// Instant Power
+// Calculate Instant Power Usage
 var P = val * parseFloat(MaxPower);
 
-// Energy (Joules and Wh)
+// Calculate energy
 var dur = parseFloat(betweenCuesTime);
 var E_J = P * dur;
 var E_Wh = E_J / 3600;
 
-// Outputs
-var PowerUsed = P;
-var Energy_J = E_J;
-var Energy_Wh = E_Wh;
-
-
+// Round to 2
+PowerUsed = Math.round(P * 100) / 100;
+Energy_J  = Math.round(E_J * 100) / 100;
+Energy_Wh = Math.round(E_Wh * 100) / 100;
 </jsScript_script>
       </jsScript>
     </jsScripts>
@@ -587,24 +591,28 @@ var Energy_Wh = E_Wh;
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>// Normalize Intensity
+        <jsScript_script>// ===========================================
+// Calculate Power and Energy per Cue
+// Input fields: Value, MaxPower, betweenCuesTime
+// Output fields: PowerUsed, Energy_J, Energy_Wh
+// ===========================================
+
+// Normalize intensity
 var val = parseFloat(Value);
 if (val > 1) val = val / 255;  // converte 0–255 → 0–1
 
-// Instant Power
+// Calculate Instant Power Usage
 var P = val * parseFloat(MaxPower);
 
-// Energy (Joules and Wh)
+// Calculate energy
 var dur = parseFloat(betweenCuesTime);
 var E_J = P * dur;
 var E_Wh = E_J / 3600;
 
-// Outputs
-var PowerUsed = P;
-var Energy_J = E_J;
-var Energy_Wh = E_Wh;
-
-
+// Round to 2
+PowerUsed = Math.round(P * 100) / 100;
+Energy_J  = Math.round(E_J * 100) / 100;
+Energy_Wh = Math.round(E_Wh * 100) / 100;
 </jsScript_script>
       </jsScript>
     </jsScripts>
@@ -1414,7 +1422,7 @@ var Energy_Wh = E_Wh;
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
+    <name>Fixture Comsumption File Output</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1560,7 +1568,7 @@ var Energy_Wh = E_Wh;
         <group/>
         <nullif/>
         <trim_type>none</trim_type>
-        <length>6</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -1572,13 +1580,13 @@ var Energy_Wh = E_Wh;
         <group/>
         <nullif/>
         <trim_type>none</trim_type>
-        <length>7</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>PowerUsed</name>
         <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
+        <format>#######.###</format>
         <currency/>
         <decimal>.</decimal>
         <group>,</group>
@@ -1590,7 +1598,7 @@ var Energy_Wh = E_Wh;
       <field>
         <name>Energy_J</name>
         <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
+        <format>#######.###</format>
         <currency/>
         <decimal>.</decimal>
         <group>,</group>
@@ -1602,7 +1610,7 @@ var Energy_Wh = E_Wh;
       <field>
         <name>Energy_Wh</name>
         <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
+        <format>#######.###</format>
         <currency/>
         <decimal>.</decimal>
         <group>,</group>
@@ -1621,13 +1629,13 @@ var Energy_Wh = E_Wh;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
+      <xloc>848</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Text file output 2</name>
+    <name>Dimmer Comsumption File Output</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1773,7 +1781,7 @@ var Energy_Wh = E_Wh;
         <group/>
         <nullif/>
         <trim_type>none</trim_type>
-        <length>6</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -1791,7 +1799,7 @@ var Energy_Wh = E_Wh;
       <field>
         <name>PowerUsed</name>
         <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
+        <format>#######.###</format>
         <currency/>
         <decimal>.</decimal>
         <group>,</group>
@@ -1803,7 +1811,7 @@ var Energy_Wh = E_Wh;
       <field>
         <name>Energy_J</name>
         <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
+        <format>#######.###</format>
         <currency/>
         <decimal>.</decimal>
         <group>,</group>
@@ -1815,7 +1823,7 @@ var Energy_Wh = E_Wh;
       <field>
         <name>Energy_Wh</name>
         <type>Number</type>
-        <format>####0.0#########;-####0.0#########</format>
+        <format>#######.###</format>
         <currency/>
         <decimal>.</decimal>
         <group>,</group>
@@ -1834,7 +1842,7 @@ var Energy_Wh = E_Wh;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
+      <xloc>1040</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
