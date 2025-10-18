@@ -110,24 +110,30 @@ O objetivo é **integrar dados provenientes de múltiplas fontes (XML, CSV, Node
   - `numpy`
 
 ### Passos de Execução
-
-1. **Gerar ou importar dados com Node-RED**  
+1. **Definir os caminhos absolutos dos sguintes ficheiros:**  
+   - No Node-RED:
+                 - Node Read Fixture CSV: *fixture_consumption.csv*
+                 - Node Read Dimmer CSV: *dimmer_consumption.csv*
+   - No ficheiro Graph_Creation.ktr:
+                 - Node Add Arguments: Campo *file-path*  
+     
+2. **Gerar ou importar dados com Node-RED**  
    - Abrir `node-red-graph-generator.json` no Node-RED.  
    - Dar deploy do fluxo.
 
-2. **Executar o processo ETL no Pentaho**  
+3. **Executar o processo ETL no Pentaho**  
    - Abrir `dataint/a27967.kjb` no **Pentaho Data Integration (Spoon)**.  
    - Executar o job principal, que chama as transformações (`*.ktr`) para importar, calcular e exportar dados.  
    - Os resultados serão gerados em `data/output/`.
 
-3. **Gerar gráficos e relatórios com Python**  
+4. **Gerar gráficos e relatórios com Python**  
    - Executar o script:
      ```bash
      python scripts/graph_generator.py
      ```
    - Os gráficos serão criados na pasta `data/output/graphs`.
 
-4. **Visualizar o relatório final**  
+5. **Visualizar o relatório final**  
    - Relatório completo disponível em:  
      `http://127.0.0.1:1880/ui`
 
