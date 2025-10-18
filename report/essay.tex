@@ -11,6 +11,8 @@
 \usepackage{pdflscape} %Allows landscape oriented pages
 \usepackage{float}
 \usepackage{booktabs} % Para tabelas de qualidade
+\usepackage{graphicx}
+
 
 % PACOTE ESSENCIAL PARA COMANDOS MATEMÁTICOS COMO \text
 \usepackage{amsmath}
@@ -90,7 +92,7 @@
 	O Kettle recebe dois tipos de ficheiros exportados da grandMA2:
 	\begin{itemize}
 		\item \textbf{Cue Data (XML):} Contém a intensidade de controlo (valor DMX, $\text{0}$ a $\text{255}$) para cada aparelho de luz (todos os seus atributos) em cada \textit{Cue}, juntamente com os tempos de transição.
-	\item \textbf{Patch Data (CSV):} Ficheiros de *patch* exportados da grandMA2 que contêm a informação de mapeamento de cada aparelho: ID (Fixture/Channel), \textit{FixtureType}, nome e a que \textit{Layer} (camada de iluminação) pertence. \textbf{Não contêm dados de potência.}
+	\item \textbf{Patch Data (CSV):} Ficheiros de \textit{patch} exportados da grandMA2 que contêm a informação de mapeamento de cada aparelho: ID (Fixture/Channel), \textit{FixtureType}, nome e a que \textit{Layer} (camada de iluminação) pertence. \textbf{Não contêm dados de potência.}
 	\item \textbf{Power Consumption Data (\texttt{power\_consumption.csv}):} Ficheiro criado externamente que contém a informação da \textbf{Potência Máxima} em Watts associada a cada \textit{FixtureType} ou \textit{Channel ID} (para Dimmers), permitindo realizar o cálculo de consumo.
 	\end{itemize}
 	
@@ -154,7 +156,7 @@
 		\centering
 		\framebox{\parbox{0.9\textwidth}{\centering
 				\vspace{1cm}
-				\textbf{Esquema do Job Mestre (\texttt{a27967.kjb})} \\
+				\textbf{Esquema do Job Principal (\texttt{a27967.kjb})} \\
 				\textit{Representação da Sequência de Execução (Job Entry)}\\
 				\texttt{Start} $\rightarrow$ \texttt{Patch Import (TRANS)} $\rightarrow$ \texttt{CueData Import (TRANS)} $\rightarrow$ \texttt{Calculate Power Consumption (TRANS)} $\rightarrow$ \textbf{\texttt{Trigger Node Red (HTTP)}} $\rightarrow$ \textbf{\texttt{Wait for JSON}} $\rightarrow$ \texttt{Graph\_Generator (TRANS)} $\rightarrow$ \texttt{Send Email (TRANS)}
 				\vspace{1cm}
@@ -319,7 +321,7 @@
 		\item \textbf{Caminho a Substituir:} O utilizador deve substituir a porção do caminho que aponta para a pasta do projeto (\texttt{H:\textbackslash LESI\textbackslash ISI\textbackslash tp01-27967}) pelo caminho local onde o projeto está guardado.
 	\end{itemize}
 	
-	Os nós que requerem esta atualização são os nós \texttt{inject} (\texttt{Load Fixture CSV} e \texttt{Load Dimmer CSV}) e os nós \texttt{file} de saída. Por exemplo, o caminho:
+	Os nós que requerem esta atualização são os nós \texttt{inject} (\texttt{Read Fixture CSV} e \texttt{Read Dimmer CSV}) e os nós \texttt{file} de saída. Por exemplo, o caminho:
 	\begin{KettleCode}
 		H:\LESI\ISI\tp01-27967\data\output\fixture_consumption.csv
 	\end{KettleCode}
@@ -334,7 +336,8 @@
 		\item \textbf{Junção e Achatamento (Flatten):} Os dados de \textbf{Fixtures} e \textbf{Dimmers} são unidos (nó \texttt{join}) e convertidos numa lista única (nó \texttt{Flatten Arrays}).
 		\item \textbf{Agregação e Transformação de Gráficos:} Os dados são agregados por \textit{Layer} e \textit{FixtureType}, e formatados para diferentes tipos de gráficos (Barras, Circular) e Tabelas.
 		\item \textbf{Cálculo Total:} É calculada a \textit{Total Power Usage} e \textit{Total Energy Usage} para apresentar em indicadores (\textit{gauges}).
-		\item \textbf{Visualização e Saída de Dados:} Os dados são apresentados no \textbf{dashboard} (nós \texttt{ui\_chart}, \texttt{ui\_table}, \texttt{ui\_gauge}) e, em paralelo, os dados agregados para os gráficos são exportados como JSON (nós \texttt{file}) para uso futuro ou persistência (e.g., \texttt{layer-graph-data.json}).
+		\item \textbf{Visualização e Saída de Dados:} Os dados são apresentados no \textbf{dashboard} (nós \texttt{ui\_chart}, \texttt{ui\_table}, \texttt{ui\_gauge}) e, em paralelo, os dados agregados para os gráficos são exportados como JSON (nós \texttt{file}) para uso futuro pelo \textit{script Python} (e.g., \texttt{layer-graph-data.json}).
+		\item \textbf{Orquestração HTTP:} O fluxo inclui um nó \texttt{http in} (\texttt{/trigger}) para ser acionado remotamente pelo Kettle, iniciando o pipeline de processamento e visualização no Node-RED.
 	\end{enumerate}
 	
 	\subsection{Esquema de Agregação de Dados (Node-RED)}
@@ -382,5 +385,17 @@
 	\begin{itemize}
 		\item \textbf{Implementação de Logger em LUA/Python na grandMA2:} Desenvolver um \textbf{plugin} ou \textbf{macro} dentro da consola grandMA2 que corra em tempo real durante o espetáculo. Este \textit{plugin} faria um \textit{log} do \textit{timestamp} da mesa (utilizando o relógio interno da grandMA2) cada vez que é dado um "Go" (mudança de \textit{cue}). A exportação deste \textit{log} permitiria ao Kettle utilizar os \textbf{tempos de transição reais}, substituindo o valor aleatório simulado e garantindo a máxima precisão no cálculo de consumo energético total.
 	\end{itemize}
+	\section{Repositório Git}
+	O repositório completo do projeto pode ser encontrado no seguinte  \href{https://github.com/zealves99/tp01-27967}{link}.
+	\newpage
+	\section{Vídeo de demonstração}
+	O vídeo de demonstração pode ser acedido através do seguinte QR Code.
+	\begin{figure}[h]  % 'h' = here (aqui)
+		\centering     % centraliza a imagem
+		\includegraphics[width=0.5\textwidth]{./images/qrcode.png}
+		\caption{QR Code para vídeo de demonstração.}
+		\label{fig:qrCode}
+	\end{figure}
+	
 	
 \end{document}
