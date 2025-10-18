@@ -16,8 +16,8 @@
         "once": true,
         "onceDelay": "",
         "topic": "",
-        "x": 210,
-        "y": 160,
+        "x": 870,
+        "y": 100,
         "wires": [
             [
                 "e5da1f5da0392cc0"
@@ -41,8 +41,8 @@
         "once": true,
         "onceDelay": "",
         "topic": "",
-        "x": 210,
-        "y": 220,
+        "x": 890,
+        "y": 240,
         "wires": [
             [
                 "6ba954bdf52a584e"
@@ -54,14 +54,14 @@
         "type": "file in",
         "z": "ad532754904a6f93",
         "name": "Read Fixture CSV",
-        "filename": "filename",
-        "filenameType": "msg",
+        "filename": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\fixture_consumption.csv",
+        "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "allProps": false,
-        "x": 410,
-        "y": 160,
+        "x": 1090,
+        "y": 140,
         "wires": [
             [
                 "4d28022248d04ac5"
@@ -73,12 +73,14 @@
         "type": "file in",
         "z": "ad532754904a6f93",
         "name": "Read Dimmer CSV",
-        "filename": "",
+        "filename": "H:\\LESI\\ISI\\tp01-27967\\data\\output\\dimmer_consumption.csv",
+        "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
-        "x": 410,
-        "y": 220,
+        "allProps": false,
+        "x": 1090,
+        "y": 200,
         "wires": [
             [
                 "131915f284e6273a"
@@ -97,8 +99,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 160,
+        "x": 1340,
+        "y": 140,
         "wires": [
             [
                 "2575575518609b38",
@@ -118,8 +120,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 220,
+        "x": 1340,
+        "y": 200,
         "wires": [
             [
                 "2575575518609b38"
@@ -147,8 +149,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 860,
-        "y": 190,
+        "x": 1540,
+        "y": 170,
         "wires": [
             [
                 "25542686d5329abd",
@@ -168,8 +170,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 200,
+        "x": 1800,
+        "y": 180,
         "wires": [
             [
                 "62bf5ae28567ac56",
@@ -192,8 +194,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 160,
+        "x": 2120,
+        "y": 140,
         "wires": [
             [
                 "9fe3f80d08f228f7",
@@ -215,8 +217,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 220,
+        "x": 2120,
+        "y": 200,
         "wires": [
             [
                 "fa70ad687428acfd",
@@ -262,8 +264,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1900,
-        "y": 180,
+        "x": 2580,
+        "y": 160,
         "wires": [
             [
                 "8966e0744b95634e"
@@ -302,8 +304,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 2030,
-        "y": 100,
+        "x": 2710,
+        "y": 80,
         "wires": []
     },
     {
@@ -341,8 +343,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1900,
-        "y": 240,
+        "x": 2580,
+        "y": 220,
         "wires": [
             [
                 "e351136707d526cd"
@@ -356,8 +358,8 @@
         "group": "dashboard_group",
         "name": "Fixture Table",
         "outputs": 0,
-        "x": 1900,
-        "y": 280,
+        "x": 2580,
+        "y": 260,
         "wires": []
     },
     {
@@ -373,8 +375,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1810,
-        "y": 500,
+        "x": 2490,
+        "y": 480,
         "wires": []
     },
     {
@@ -389,8 +391,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1780,
-        "y": 560,
+        "x": 2460,
+        "y": 540,
         "wires": []
     },
     {
@@ -431,8 +433,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2260,
-        "y": 380,
+        "x": 2940,
+        "y": 360,
         "wires": [
             []
         ]
@@ -449,8 +451,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1860,
-        "y": 380,
+        "x": 2540,
+        "y": 360,
         "wires": [
             [
                 "f3602f03323ca929"
@@ -469,8 +471,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2200,
-        "y": 440,
+        "x": 2880,
+        "y": 420,
         "wires": []
     },
     {
@@ -485,8 +487,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2050,
-        "y": 380,
+        "x": 2730,
+        "y": 360,
         "wires": [
             [
                 "555b841486f2460f",
@@ -532,8 +534,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2240,
-        "y": 340,
+        "x": 2920,
+        "y": 320,
         "wires": [
             []
         ]
@@ -550,8 +552,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1860,
-        "y": 340,
+        "x": 2540,
+        "y": 320,
         "wires": [
             [
                 "1dc3d2b80f254953"
@@ -570,8 +572,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2050,
-        "y": 340,
+        "x": 2730,
+        "y": 320,
         "wires": [
             [
                 "9fb068f5170e1182"
@@ -591,8 +593,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 890,
-        "y": 100,
+        "x": 1570,
+        "y": 80,
         "wires": []
     },
     {
@@ -607,8 +609,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 280,
+        "x": 1780,
+        "y": 260,
         "wires": []
     },
     {
@@ -624,8 +626,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
-        "y": 360,
+        "x": 2000,
+        "y": 340,
         "wires": []
     },
     {
@@ -640,8 +642,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1810,
-        "y": 120,
+        "x": 2490,
+        "y": 100,
         "wires": [
             [
                 "e72cb0df05575977"
@@ -660,8 +662,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1360,
-        "y": 620,
+        "x": 2040,
+        "y": 600,
         "wires": [
             [
                 "6cf047815b248b4a",
@@ -693,8 +695,8 @@
         "seg2": "200000",
         "diff": false,
         "className": "",
-        "x": 1750,
-        "y": 620,
+        "x": 2430,
+        "y": 600,
         "wires": []
     },
     {
@@ -721,8 +723,8 @@
         "seg2": "150000",
         "diff": false,
         "className": "",
-        "x": 1750,
-        "y": 680,
+        "x": 2430,
+        "y": 660,
         "wires": []
     },
     {
@@ -737,8 +739,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
-        "y": 680,
+        "x": 2050,
+        "y": 660,
         "wires": [
             [
                 "5ed7b509b492063a",
@@ -757,8 +759,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "utf8",
-        "x": 2540,
-        "y": 120,
+        "x": 3220,
+        "y": 100,
         "wires": [
             []
         ]
@@ -774,8 +776,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2540,
-        "y": 220,
+        "x": 3220,
+        "y": 200,
         "wires": [
             []
         ]
@@ -791,8 +793,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2560,
-        "y": 620,
+        "x": 3240,
+        "y": 600,
         "wires": [
             []
         ]
@@ -808,11 +810,64 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2560,
-        "y": 680,
+        "x": 3240,
+        "y": 660,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "64b1d9cfe263e79d",
+        "type": "http in",
+        "z": "ad532754904a6f93",
+        "name": "Update Node Red",
+        "url": "/trigger",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "8c305111f626d6ea"
+            ]
+        ]
+    },
+    {
+        "id": "8c305111f626d6ea",
+        "type": "function",
+        "z": "ad532754904a6f93",
+        "name": "Start By HTTP Request",
+        "func": "// Simulate some processing\nnode.warn(\"Received trigger from Kettle: \" + JSON.stringify(msg.payload));\n\n// Simulate async work (3 seconds)\nsetTimeout(() => {\n    // Prepare message to send back to Kettle\n    const reply = {\n        status: \"done\",\n        timestamp: new Date().toISOString()\n    };\n    // Send HTTP POST back to Kettle\n    const axios = global.get('axios');\n    axios.post('http://localhost:8081/kettle-ready', reply)\n         .then(res => node.warn(\"Sent completion signal back to Kettle\"))\n         .catch(err => node.error(\"Error sending back to Kettle: \" + err));\n}, 3000);\n\nmsg.payload = { result: \"processing started\" };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "4ce3528360f67859",
+                "e5da1f5da0392cc0",
+                "6ba954bdf52a584e"
+            ]
+        ]
+    },
+    {
+        "id": "4ce3528360f67859",
+        "type": "http response",
+        "z": "ad532754904a6f93",
+        "name": "HTTP response",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "x": 620,
+        "y": 260,
+        "wires": []
     },
     {
         "id": "dashboard_group",
@@ -832,7 +887,7 @@
         "order": 1
     },
     {
-        "id": "be649bc627eac386",
+        "id": "4cf20cc7c570a8f8",
         "type": "global-config",
         "env": [],
         "modules": {

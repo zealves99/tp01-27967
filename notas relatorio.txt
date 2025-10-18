@@ -1,3 +1,0 @@
-instalar biblioteca python através do comando python -m pip install matplotlib pandas
-
-no send Email, tive de adicionar o add constants porque o email não deixou definir só para que endereço enviar.

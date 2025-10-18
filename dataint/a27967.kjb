@@ -421,7 +421,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>768</xloc>
+      <xloc>896</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -499,17 +499,17 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>896</xloc>
+      <xloc>1024</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>HTTP</name>
+      <name>Trigger Node Red</name>
       <description/>
       <type>HTTP</type>
       <attributes/>
-      <url>http://localhost:1880/kettle-trigger</url>
-      <targetfilename/>
+      <url>http://localhost:1880/trigger</url>
+      <targetfilename>${Internal.Entry.Current.Directory}\..\data\output\http-out.txt</targetfilename>
       <file_appended>N</file_appended>
       <date_time_added>N</date_time_added>
       <targetfilename_extension/>
@@ -523,13 +523,35 @@
       <proxy_host/>
       <proxy_port/>
       <non_proxy_hosts/>
-      <addfilenameresult>Y</addfilenameresult>
+      <addfilenameresult>N</addfilenameresult>
       <headers>
+        <header>
+          <header_name>content-type</header_name>
+          <header_value>application/json</header_value>
+        </header>
       </headers>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>608</xloc>
+      <xloc>640</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Wait for file</name>
+      <description/>
+      <type>WAIT_FOR_FILE</type>
+      <attributes/>
+      <filename>${Internal.Entry.Current.Directory}\..\data\output\layer-graph-data.json</filename>
+      <maximum_timeout>15</maximum_timeout>
+      <check_cycle_time>10</check_cycle_time>
+      <success_on_timeout>N</success_on_timeout>
+      <file_size_check>N</file_size_check>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -565,6 +587,33 @@
     <hop>
       <from>Graph_Generator</from>
       <to>Send Email</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Calculate Power Consumption</from>
+      <to>Trigger Node Red</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Trigger Node Red</from>
+      <to>Wait for file</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Wait for file</from>
+      <to>Graph_Generator</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

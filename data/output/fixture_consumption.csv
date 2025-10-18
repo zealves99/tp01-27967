@@ -1,443 +1,443 @@
 CueNumber;ChannelID;FixtureID;AttributeName;Value;betweenCuesTime;FixtureType;MaxPower;Layer;Name;PowerUsed;Energy_J;Energy_Wh
-0;;103;DIM;0;166;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-1;;100;DIM;30;348;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;111.76;38894.12;10.8
-1;;101;DIM;30;348;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;111.76;38894.12;10.8
-1;;102;DIM;30;348;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;111.76;38894.12;10.8
-1;;103;DIM;30;348;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;111.76;38894.12;10.8
-1;;104;DIM;30;348;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;111.76;38894.12;10.8
-1;;105;DIM;30;348;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;111.76;38894.12;10.8
-1;;110;DIM;30;348;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;76.47;26611.76;7.39
-1;;111;DIM;30;348;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;76.47;26611.76;7.39
-1;;112;DIM;30;348;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;76.47;26611.76;7.39
-1;;113;DIM;30;348;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;76.47;26611.76;7.39
-1;;114;DIM;30;348;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;76.47;26611.76;7.39
-1;;115;DIM;30;348;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;76.47;26611.76;7.39
-2;;100;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-2;;101;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-2;;102;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-2;;103;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-2;;104;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-2;;105;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
-2;;110;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-2;;111;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-2;;112;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-2;;113;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-2;;114;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-2;;115;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-2;;100;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-2;;101;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-2;;102;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-2;;103;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-2;;104;DIM;0;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-2;;105;DIM;20;59;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;4396.08;1.22
-2;;110;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-2;;111;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-2;;112;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-2;;113;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-2;;114;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-2;;115;DIM;0;59;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-3;;100;DIM;0;317;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-3;;101;DIM;0;317;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-3;;102;DIM;0;317;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-3;;103;DIM;0;317;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-3;;104;DIM;0;317;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-3;;105;DIM;20;317;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;23619.61;6.56
-3;;110;DIM;0;317;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-3;;111;DIM;0;317;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-3;;112;DIM;0;317;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-3;;113;DIM;0;317;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-3;;114;DIM;0;317;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-3;;115;DIM;0;317;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-4;;100;DIM;11;235;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;9630.39;2.68
-4;;101;DIM;0;235;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-4;;102;DIM;0;235;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-4;;103;DIM;0;235;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-4;;104;DIM;0;235;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-4;;105;DIM;20;235;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;17509.8;4.86
-4;;110;DIM;0;235;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-4;;111;DIM;0;235;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-4;;112;DIM;0;235;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-4;;113;DIM;0;235;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-4;;114;DIM;0;235;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-4;;115;DIM;0;235;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-5;;100;DIM;11;56;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;2294.9;0.64
-5;;101;DIM;0;56;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-5;;102;DIM;0;56;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-5;;103;DIM;0;56;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-5;;104;DIM;0;56;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-5;;105;DIM;11;56;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;2294.9;0.64
-5;;110;DIM;0;56;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-5;;111;DIM;0;56;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-5;;112;DIM;0;56;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-5;;113;DIM;0;56;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-5;;114;DIM;0;56;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-5;;115;DIM;0;56;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-7;;104;DIM;16;80;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;59.61;4768.63;1.32
-8;;100;DIM;17;108;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;63.33;6840;1.9
-9;;101;DIM;14;414;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;52.16;21592.94;6
-10;;100;DIM;11;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;860.59;0.24
-10;;101;DIM;0;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-10;;104;DIM;10;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;37.25;782.35;0.22
-11;;104;DIM;0;91;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-12;;100;DIM;11;238;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;9753.33;2.71
-12;;101;DIM;0;238;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-12;;102;DIM;0;238;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-12;;103;DIM;0;238;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-12;;104;DIM;0;238;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-12;;105;DIM;11;238;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;9753.33;2.71
-12;;110;DIM;0;238;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-12;;111;DIM;0;238;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-12;;112;DIM;0;238;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-12;;113;DIM;0;238;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-12;;114;DIM;0;238;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-12;;115;DIM;0;238;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-13;;101;DIM;11.5;42;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;42.84;1799.41;0.5
-14;;101;DIM;0;237;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-15;;100;DIM;11;409;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;16760.98;4.66
-15;;101;DIM;0;409;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-15;;102;DIM;0;409;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-15;;103;DIM;0;409;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-15;;104;DIM;0;409;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-15;;105;DIM;11;409;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;16760.98;4.66
-15;;110;DIM;0;409;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-15;;111;DIM;0;409;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-15;;112;DIM;0;409;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-15;;113;DIM;0;409;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-15;;114;DIM;0;409;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-15;;115;DIM;0;409;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-16;;100;DIM;8;217;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;6467.45;1.8
-16;;101;DIM;0;217;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-16;;102;DIM;6;217;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4850.59;1.35
-16;;103;DIM;0;217;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-16;;104;DIM;0;217;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-16;;105;DIM;11;217;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;8892.75;2.47
-16;;110;DIM;0;217;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-16;;111;DIM;0;217;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-16;;112;DIM;0;217;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-16;;113;DIM;15;217;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;38.24;8297.06;2.3
-16;;114;DIM;0;217;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-16;;115;DIM;0;217;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-17;;101;DIM;13.5;239;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;50.29;12020.29;3.34
-18;;101;DIM;0;54;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-19;;100;DIM;8;329;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;9805.49;2.72
-19;;101;DIM;0;329;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-19;;102;DIM;0;329;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-19;;103;DIM;0;329;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-19;;104;DIM;20;329;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;74.51;24513.73;6.81
-19;;105;DIM;11;329;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;13482.55;3.75
-19;;110;DIM;0;329;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-19;;111;DIM;0;329;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-19;;112;DIM;0;329;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-19;;113;DIM;0;329;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-19;;114;DIM;0;329;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-19;;115;DIM;0;329;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-20;;100;DIM;15.5;283;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;57.75;16341.86;4.54
-20;;104;DIM;0;283;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-21;;100;DIM;8;115;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;3427.45;0.95
-21;;101;DIM;0;115;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-21;;102;DIM;6;115;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;2570.59;0.71
-21;;103;DIM;0;115;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-21;;104;DIM;0;115;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-21;;105;DIM;11;115;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;4712.75;1.31
-21;;110;DIM;0;115;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-21;;111;DIM;0;115;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-21;;112;DIM;0;115;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-21;;113;DIM;20;115;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;50.98;5862.75;1.63
-21;;114;DIM;0;115;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-21;;115;DIM;0;115;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-22;;101;DIM;16;221;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;59.61;13173.33;3.66
-23;;101;DIM;0;200;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-24;;100;DIM;8;356;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;10610.2;2.95
-24;;101;DIM;0;356;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-24;;102;DIM;6;356;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;7957.65;2.21
-24;;103;DIM;0;356;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-24;;104;DIM;22;356;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;81.96;29178.04;8.11
-24;;105;DIM;11;356;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;14589.02;4.05
-24;;110;DIM;0;356;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-24;;111;DIM;0;356;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-24;;112;DIM;0;356;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-24;;113;DIM;0;356;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-24;;114;DIM;0;356;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-24;;115;DIM;0;356;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-25;;100;DIM;8;200;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;5960.78;1.66
-25;;101;DIM;0;200;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-25;;102;DIM;6;200;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4470.59;1.24
-25;;103;DIM;0;200;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-25;;104;DIM;0;200;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-25;;105;DIM;11;200;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;8196.08;2.28
-25;;110;DIM;12.5;200;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;31.86;6372.55;1.77
-25;;111;DIM;12.5;200;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;31.86;6372.55;1.77
-25;;112;DIM;12.5;200;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;31.86;6372.55;1.77
-25;;113;DIM;12.5;200;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;31.86;6372.55;1.77
-25;;114;DIM;12.5;200;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;31.86;6372.55;1.77
-25;;115;DIM;0;200;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-26;;100;DIM;16;238;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;59.61;14186.67;3.94
-27;;100;DIM;8;377;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;11236.08;3.12
-28;;100;DIM;8;314;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;9358.43;2.6
-28;;101;DIM;0;314;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-28;;102;DIM;6;314;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;7018.82;1.95
-28;;103;DIM;0;314;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-28;;104;DIM;0;314;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-28;;105;DIM;11;314;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;12867.84;3.57
-28;;110;DIM;0;314;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-28;;111;DIM;0;314;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-28;;112;DIM;0;314;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-28;;113;DIM;0;314;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-28;;114;DIM;0;314;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-28;;115;DIM;25;314;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;63.73;20009.8;5.56
-29;;100;DIM;8;154;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;4589.8;1.27
-29;;101;DIM;0;154;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-29;;102;DIM;6;154;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;3442.35;0.96
-29;;103;DIM;0;154;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-29;;104;DIM;0;154;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-29;;105;DIM;11;154;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;6310.98;1.75
-29;;110;DIM;0;154;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-29;;111;DIM;0;154;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-29;;112;DIM;0;154;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-29;;113;DIM;0;154;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-29;;114;DIM;0;154;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-29;;115;DIM;33;154;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;84.12;12954.12;3.6
-30;;105;DIM;14.5;328;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;54.02;17718.43;4.92
-30;;114;DIM;17;328;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;43.33;14213.33;3.95
-31;;100;DIM;8;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;625.88;0.17
-31;;101;DIM;0;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-31;;102;DIM;6;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;469.41;0.13
-31;;103;DIM;0;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-31;;104;DIM;0;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-31;;105;DIM;8;21;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;625.88;0.17
-31;;110;DIM;0;21;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-31;;111;DIM;0;21;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-31;;112;DIM;0;21;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-31;;113;DIM;0;21;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-31;;114;DIM;0;21;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-31;;115;DIM;0;21;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-32;;100;DIM;8;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;11951.37;3.32
-32;;101;DIM;0;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-32;;102;DIM;6;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;8963.53;2.49
-32;;103;DIM;0;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-32;;104;DIM;0;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-32;;105;DIM;8;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;11951.37;3.32
-32;;110;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-32;;111;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-32;;112;DIM;15.5;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;39.51;15843.43;4.4
-32;;113;DIM;15.5;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;39.51;15843.43;4.4
-32;;114;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-32;;115;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-33;;100;DIM;8;80;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;2384.31;0.66
-33;;101;DIM;0;80;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-33;;102;DIM;6;80;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;1788.24;0.5
-33;;103;DIM;0;80;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-33;;104;DIM;25.5;80;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;95;7600;2.11
-33;;105;DIM;8;80;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;2384.31;0.66
-33;;110;DIM;0;80;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-33;;111;DIM;0;80;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-33;;112;DIM;0;80;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-33;;113;DIM;0;80;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-33;;114;DIM;0;80;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-33;;115;DIM;0;80;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-34;;100;DIM;8;185;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;5513.73;1.53
-34;;101;DIM;0;185;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-34;;102;DIM;6;185;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4135.29;1.15
-34;;103;DIM;0;185;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-34;;104;DIM;0;185;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-34;;105;DIM;8;185;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;5513.73;1.53
-34;;110;DIM;0;185;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-34;;111;DIM;0;185;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-34;;112;DIM;0;185;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-34;;113;DIM;33.5;185;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;85.39;15797.55;4.39
-34;;114;DIM;0;185;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-34;;115;DIM;0;185;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-35;;100;DIM;8;142;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;4232.16;1.18
-35;;101;DIM;0;142;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-35;;102;DIM;6;142;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;3174.12;0.88
-35;;103;DIM;0;142;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-35;;104;DIM;0;142;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-35;;105;DIM;8;142;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;4232.16;1.18
-35;;110;DIM;0;142;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-35;;111;DIM;0;142;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-35;;112;DIM;0;142;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-35;;113;DIM;1;142;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;92300;25.64
-35;;114;DIM;0;142;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-35;;115;DIM;0;142;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-36;;104;DIM;22.5;282;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;83.82;23638.24;6.57
-37;;104;DIM;0;220;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-41;;100;DIM;8;66;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;1967.06;0.55
-41;;101;DIM;0;66;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-41;;102;DIM;6;66;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;1475.29;0.41
-41;;103;DIM;0;66;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-41;;104;DIM;0;66;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-41;;105;DIM;8;66;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;1967.06;0.55
-41;;110;DIM;0;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-41;;111;DIM;0;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-41;;112;DIM;0;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-41;;113;DIM;20;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;50.98;3364.71;0.93
-41;;114;DIM;0;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-41;;115;DIM;0;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-41;;112;DIM;13.5;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;34.41;2271.18;0.63
-41;;113;DIM;14.5;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;36.96;2439.41;0.68
-41;;112;DIM;0;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-41;;113;DIM;1;66;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;42900;11.92
-44;;100;DIM;8;282;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;8404.71;2.33
-44;;101;DIM;0;282;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-44;;102;DIM;6;282;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;6303.53;1.75
-44;;103;DIM;0;282;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-44;;104;DIM;0;282;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-44;;105;DIM;8;282;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;8404.71;2.33
-44;;110;DIM;0;282;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-44;;111;DIM;0;282;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-44;;112;DIM;23;282;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;58.63;16532.94;4.59
-44;;113;DIM;24;282;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;61.18;17251.76;4.79
-44;;114;DIM;0;282;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-44;;115;DIM;0;282;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-45;;100;DIM;0;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-45;;101;DIM;0;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-45;;102;DIM;6;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;7287.06;2.02
-45;;103;DIM;0;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-45;;104;DIM;0;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-45;;105;DIM;16.5;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;61.47;20039.41;5.57
-45;;110;DIM;0;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-45;;111;DIM;0;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-45;;112;DIM;0;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-45;;113;DIM;0;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-45;;114;DIM;0;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-45;;115;DIM;0;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-46;;100;DIM;0;277;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-46;;101;DIM;0;277;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-46;;102;DIM;6;277;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;6191.76;1.72
-46;;103;DIM;0;277;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-46;;104;DIM;0;277;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-46;;105;DIM;20;277;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;20639.22;5.73
-46;;110;DIM;0;277;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-46;;111;DIM;0;277;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-46;;112;DIM;0;277;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-46;;113;DIM;0;277;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-46;;114;DIM;0;277;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-46;;115;DIM;0;277;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-47;;100;DIM;0;47;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-47;;101;DIM;0;47;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-47;;102;DIM;6;47;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;1050.59;0.29
-47;;103;DIM;23;47;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;85.69;4027.25;1.12
-47;;104;DIM;0;47;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-47;;105;DIM;0;47;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
-47;;110;DIM;0;47;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-47;;111;DIM;0;47;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-47;;112;DIM;0;47;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-47;;113;DIM;0;47;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-47;;114;DIM;0;47;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-47;;115;DIM;0;47;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-48;;100;DIM;0;202;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-48;;101;DIM;0;202;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-48;;102;DIM;6;202;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4515.29;1.25
-48;;103;DIM;0;202;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-48;;104;DIM;0;202;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-48;;105;DIM;12;202;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;44.71;9030.59;2.51
-48;;110;DIM;0;202;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-48;;111;DIM;0;202;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-48;;112;DIM;0;202;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-48;;113;DIM;0;202;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-48;;114;DIM;0;202;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-48;;115;DIM;0;202;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-49;;100;DIM;8;77;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;2294.9;0.64
-49;;101;DIM;0;77;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-49;;102;DIM;6;77;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;1721.18;0.48
-49;;103;DIM;0;77;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-49;;104;DIM;0;77;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-49;;105;DIM;8;77;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;2294.9;0.64
-49;;110;DIM;0;77;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-49;;111;DIM;0;77;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-49;;112;DIM;0;77;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-49;;113;DIM;19;77;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;48.43;3729.22;1.04
-49;;114;DIM;0;77;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-49;;115;DIM;0;77;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-50;;101;DIM;17;318;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;63.33;20140;5.59
-51;;101;DIM;0;49;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-52;;100;DIM;8;257;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;7659.61;2.13
-52;;101;DIM;0;257;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-52;;102;DIM;6;257;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;5744.71;1.6
-52;;103;DIM;0;257;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-52;;104;DIM;0;257;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-52;;105;DIM;8;257;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;7659.61;2.13
-52;;110;DIM;0;257;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-52;;111;DIM;0;257;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-52;;112;DIM;0;257;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-52;;113;DIM;1;257;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;167050;46.4
-52;;114;DIM;0;257;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-52;;115;DIM;0;257;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-53;;100;DIM;8;310;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;9239.22;2.57
-53;;101;DIM;0;310;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-53;;102;DIM;0;310;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-53;;103;DIM;24;310;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;89.41;27717.65;7.7
-53;;104;DIM;0;310;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-53;;105;DIM;8;310;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;9239.22;2.57
-53;;110;DIM;0;310;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-53;;111;DIM;0;310;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-53;;112;DIM;0;310;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-53;;113;DIM;1;310;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;201500;55.97
-53;;114;DIM;0;310;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-53;;115;DIM;0;310;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-54;;100;DIM;8;84;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;2503.53;0.7
-54;;101;DIM;0;84;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-54;;102;DIM;6;84;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;1877.65;0.52
-54;;103;DIM;0;84;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-54;;104;DIM;0;84;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-54;;105;DIM;8;84;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;2503.53;0.7
-54;;110;DIM;28;84;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;71.37;5995.29;1.67
-54;;111;DIM;28;84;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;71.37;5995.29;1.67
-54;;112;DIM;28;84;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;71.37;5995.29;1.67
-54;;113;DIM;29;84;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;73.92;6209.41;1.72
-54;;114;DIM;28;84;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;71.37;5995.29;1.67
-54;;115;DIM;28;84;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;71.37;5995.29;1.67
-55;;100;DIM;21.5;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;80.1;16340;4.54
-55;;101;DIM;0;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-55;;102;DIM;6;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4560;1.27
-55;;103;DIM;0;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-55;;104;DIM;0;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-55;;105;DIM;8;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;6080;1.69
-55;;110;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-55;;111;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-55;;112;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-55;;113;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-55;;114;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-55;;115;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-55;;100;DIM;21.5;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;80.1;16340;4.54
-55;;101;DIM;0;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-55;;102;DIM;6;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4560;1.27
-55;;103;DIM;0;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-55;;104;DIM;0;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-55;;105;DIM;8;204;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;6080;1.69
-55;;110;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-55;;111;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-55;;112;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-55;;113;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-55;;114;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-55;;115;DIM;0;204;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-56;;100;DIM;0;101;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-56;;101;DIM;0;101;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-56;;102;DIM;0;101;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-56;;103;DIM;0;101;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-56;;104;DIM;0;101;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-56;;105;DIM;0;101;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
-56;;110;DIM;0;101;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-56;;111;DIM;0;101;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-56;;112;DIM;0;101;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-56;;113;DIM;0;101;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-56;;114;DIM;0;101;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-56;;115;DIM;0;101;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
-57;;100;DIM;0;296;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
-57;;101;DIM;0;296;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
-57;;102;DIM;0;296;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
-57;;103;DIM;0;296;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
-57;;104;DIM;0;296;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
-57;;105;DIM;0;296;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
-57;;110;DIM;40;296;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;101.96;30180.39;8.38
-57;;111;DIM;40;296;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;101.96;30180.39;8.38
-57;;112;DIM;40;296;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;101.96;30180.39;8.38
-57;;113;DIM;40;296;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;101.96;30180.39;8.38
-57;;114;DIM;40;296;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;101.96;30180.39;8.38
-57;;115;DIM;40;296;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;101.96;30180.39;8.38
-58;;110;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
-58;;111;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
-58;;112;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
-58;;113;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
-58;;114;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
-58;;115;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+0;;103;DIM;0;53;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+1;;100;DIM;30;13;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;111.76;1452.94;0.4
+1;;101;DIM;30;13;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;111.76;1452.94;0.4
+1;;102;DIM;30;13;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;111.76;1452.94;0.4
+1;;103;DIM;30;13;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;111.76;1452.94;0.4
+1;;104;DIM;30;13;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;111.76;1452.94;0.4
+1;;105;DIM;30;13;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;111.76;1452.94;0.4
+1;;110;DIM;30;13;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;76.47;994.12;0.28
+1;;111;DIM;30;13;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;76.47;994.12;0.28
+1;;112;DIM;30;13;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;76.47;994.12;0.28
+1;;113;DIM;30;13;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;76.47;994.12;0.28
+1;;114;DIM;30;13;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;76.47;994.12;0.28
+1;;115;DIM;30;13;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;76.47;994.12;0.28
+2;;100;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+2;;101;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+2;;102;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+2;;103;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+2;;104;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+2;;105;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
+2;;110;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+2;;111;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+2;;112;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+2;;113;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+2;;114;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+2;;115;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+2;;100;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+2;;101;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+2;;102;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+2;;103;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+2;;104;DIM;0;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+2;;105;DIM;20;114;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;8494.12;2.36
+2;;110;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+2;;111;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+2;;112;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+2;;113;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+2;;114;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+2;;115;DIM;0;114;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+3;;100;DIM;0;125;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+3;;101;DIM;0;125;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+3;;102;DIM;0;125;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+3;;103;DIM;0;125;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+3;;104;DIM;0;125;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+3;;105;DIM;20;125;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;9313.73;2.59
+3;;110;DIM;0;125;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+3;;111;DIM;0;125;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+3;;112;DIM;0;125;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+3;;113;DIM;0;125;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+3;;114;DIM;0;125;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+3;;115;DIM;0;125;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+4;;100;DIM;11;398;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;16310.2;4.53
+4;;101;DIM;0;398;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+4;;102;DIM;0;398;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+4;;103;DIM;0;398;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+4;;104;DIM;0;398;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+4;;105;DIM;20;398;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;29654.9;8.24
+4;;110;DIM;0;398;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+4;;111;DIM;0;398;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+4;;112;DIM;0;398;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+4;;113;DIM;0;398;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+4;;114;DIM;0;398;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+4;;115;DIM;0;398;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+5;;100;DIM;11;402;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;16474.12;4.58
+5;;101;DIM;0;402;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+5;;102;DIM;0;402;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+5;;103;DIM;0;402;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+5;;104;DIM;0;402;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+5;;105;DIM;11;402;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;16474.12;4.58
+5;;110;DIM;0;402;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+5;;111;DIM;0;402;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+5;;112;DIM;0;402;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+5;;113;DIM;0;402;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+5;;114;DIM;0;402;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+5;;115;DIM;0;402;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+7;;104;DIM;16;58;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;59.61;3457.25;0.96
+8;;100;DIM;17;416;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;63.33;26346.67;7.32
+9;;101;DIM;14;134;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;52.16;6989.02;1.94
+10;;100;DIM;11;58;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;2376.86;0.66
+10;;101;DIM;0;58;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+10;;104;DIM;10;58;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;37.25;2160.78;0.6
+11;;104;DIM;0;302;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+12;;100;DIM;11;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;12580.98;3.49
+12;;101;DIM;0;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+12;;102;DIM;0;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+12;;103;DIM;0;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+12;;104;DIM;0;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+12;;105;DIM;11;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;12580.98;3.49
+12;;110;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+12;;111;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+12;;112;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+12;;113;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+12;;114;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+12;;115;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+13;;101;DIM;11.5;158;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;42.84;6769.22;1.88
+14;;101;DIM;0;322;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+15;;100;DIM;11;367;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;40.98;15039.8;4.18
+15;;101;DIM;0;367;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+15;;102;DIM;0;367;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+15;;103;DIM;0;367;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+15;;104;DIM;0;367;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+15;;105;DIM;11;367;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;15039.8;4.18
+15;;110;DIM;0;367;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+15;;111;DIM;0;367;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+15;;112;DIM;0;367;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+15;;113;DIM;0;367;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+15;;114;DIM;0;367;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+15;;115;DIM;0;367;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+16;;100;DIM;8;236;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;7033.73;1.95
+16;;101;DIM;0;236;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+16;;102;DIM;6;236;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;5275.29;1.47
+16;;103;DIM;0;236;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+16;;104;DIM;0;236;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+16;;105;DIM;11;236;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;9671.37;2.69
+16;;110;DIM;0;236;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+16;;111;DIM;0;236;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+16;;112;DIM;0;236;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+16;;113;DIM;15;236;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;38.24;9023.53;2.51
+16;;114;DIM;0;236;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+16;;115;DIM;0;236;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+17;;101;DIM;13.5;335;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;50.29;16848.53;4.68
+18;;101;DIM;0;379;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+19;;100;DIM;8;407;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;12130.2;3.37
+19;;101;DIM;0;407;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+19;;102;DIM;0;407;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+19;;103;DIM;0;407;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+19;;104;DIM;20;407;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;74.51;30325.49;8.42
+19;;105;DIM;11;407;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;16679.02;4.63
+19;;110;DIM;0;407;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+19;;111;DIM;0;407;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+19;;112;DIM;0;407;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+19;;113;DIM;0;407;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+19;;114;DIM;0;407;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+19;;115;DIM;0;407;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+20;;100;DIM;15.5;206;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;57.75;11895.49;3.3
+20;;104;DIM;0;206;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+21;;100;DIM;8;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;10818.82;3.01
+21;;101;DIM;0;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+21;;102;DIM;6;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;8114.12;2.25
+21;;103;DIM;0;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+21;;104;DIM;0;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+21;;105;DIM;11;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;14875.88;4.13
+21;;110;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+21;;111;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+21;;112;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+21;;113;DIM;20;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;50.98;18505.88;5.14
+21;;114;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+21;;115;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+22;;101;DIM;16;400;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;59.61;23843.14;6.62
+23;;101;DIM;0;411;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+24;;100;DIM;8;208;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;6199.22;1.72
+24;;101;DIM;0;208;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+24;;102;DIM;6;208;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4649.41;1.29
+24;;103;DIM;0;208;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+24;;104;DIM;22;208;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;81.96;17047.84;4.74
+24;;105;DIM;11;208;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;8523.92;2.37
+24;;110;DIM;0;208;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+24;;111;DIM;0;208;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+24;;112;DIM;0;208;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+24;;113;DIM;0;208;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+24;;114;DIM;0;208;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+24;;115;DIM;0;208;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+25;;100;DIM;8;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;9716.08;2.7
+25;;101;DIM;0;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+25;;102;DIM;6;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;7287.06;2.02
+25;;103;DIM;0;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+25;;104;DIM;0;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+25;;105;DIM;11;326;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;13359.61;3.71
+25;;110;DIM;12.5;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;31.86;10387.25;2.89
+25;;111;DIM;12.5;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;31.86;10387.25;2.89
+25;;112;DIM;12.5;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;31.86;10387.25;2.89
+25;;113;DIM;12.5;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;31.86;10387.25;2.89
+25;;114;DIM;12.5;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;31.86;10387.25;2.89
+25;;115;DIM;0;326;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+26;;100;DIM;16;150;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;59.61;8941.18;2.48
+27;;100;DIM;8;63;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;1877.65;0.52
+28;;100;DIM;8;38;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;1132.55;0.31
+28;;101;DIM;0;38;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+28;;102;DIM;6;38;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;849.41;0.24
+28;;103;DIM;0;38;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+28;;104;DIM;0;38;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+28;;105;DIM;11;38;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;1557.25;0.43
+28;;110;DIM;0;38;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+28;;111;DIM;0;38;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+28;;112;DIM;0;38;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+28;;113;DIM;0;38;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+28;;114;DIM;0;38;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+28;;115;DIM;25;38;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;63.73;2421.57;0.67
+29;;100;DIM;8;113;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;3367.84;0.94
+29;;101;DIM;0;113;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+29;;102;DIM;6;113;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;2525.88;0.7
+29;;103;DIM;0;113;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+29;;104;DIM;0;113;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+29;;105;DIM;11;113;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;40.98;4630.78;1.29
+29;;110;DIM;0;113;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+29;;111;DIM;0;113;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+29;;112;DIM;0;113;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+29;;113;DIM;0;113;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+29;;114;DIM;0;113;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+29;;115;DIM;33;113;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;84.12;9505.29;2.64
+30;;105;DIM;14.5;417;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;54.02;22526.18;6.26
+30;;114;DIM;17;417;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;43.33;18070;5.02
+31;;100;DIM;8;68;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;2026.67;0.56
+31;;101;DIM;0;68;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+31;;102;DIM;6;68;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;1520;0.42
+31;;103;DIM;0;68;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+31;;104;DIM;0;68;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+31;;105;DIM;8;68;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;2026.67;0.56
+31;;110;DIM;0;68;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+31;;111;DIM;0;68;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+31;;112;DIM;0;68;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+31;;113;DIM;0;68;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+31;;114;DIM;0;68;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+31;;115;DIM;0;68;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+32;;100;DIM;8;12;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;357.65;0.1
+32;;101;DIM;0;12;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+32;;102;DIM;6;12;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;268.24;0.07
+32;;103;DIM;0;12;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+32;;104;DIM;0;12;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+32;;105;DIM;8;12;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;357.65;0.1
+32;;110;DIM;0;12;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+32;;111;DIM;0;12;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+32;;112;DIM;15.5;12;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;39.51;474.12;0.13
+32;;113;DIM;15.5;12;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;39.51;474.12;0.13
+32;;114;DIM;0;12;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+32;;115;DIM;0;12;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+33;;100;DIM;8;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;10818.82;3.01
+33;;101;DIM;0;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+33;;102;DIM;6;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;8114.12;2.25
+33;;103;DIM;0;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+33;;104;DIM;25.5;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;95;34485;9.58
+33;;105;DIM;8;363;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;10818.82;3.01
+33;;110;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+33;;111;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+33;;112;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+33;;113;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+33;;114;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+33;;115;DIM;0;363;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+34;;100;DIM;8;397;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;11832.16;3.29
+34;;101;DIM;0;397;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+34;;102;DIM;6;397;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;8874.12;2.47
+34;;103;DIM;0;397;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+34;;104;DIM;0;397;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+34;;105;DIM;8;397;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;11832.16;3.29
+34;;110;DIM;0;397;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+34;;111;DIM;0;397;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+34;;112;DIM;0;397;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+34;;113;DIM;33.5;397;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;85.39;33900.69;9.42
+34;;114;DIM;0;397;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+34;;115;DIM;0;397;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+35;;100;DIM;8;416;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;12398.43;3.44
+35;;101;DIM;0;416;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+35;;102;DIM;6;416;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;9298.82;2.58
+35;;103;DIM;0;416;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+35;;104;DIM;0;416;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+35;;105;DIM;8;416;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;12398.43;3.44
+35;;110;DIM;0;416;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+35;;111;DIM;0;416;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+35;;112;DIM;0;416;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+35;;113;DIM;1;416;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;270400;75.11
+35;;114;DIM;0;416;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+35;;115;DIM;0;416;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+36;;104;DIM;22.5;174;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;83.82;14585.29;4.05
+37;;104;DIM;0;319;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+41;;100;DIM;8;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;11951.37;3.32
+41;;101;DIM;0;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+41;;102;DIM;6;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;8963.53;2.49
+41;;103;DIM;0;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+41;;104;DIM;0;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+41;;105;DIM;8;401;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;11951.37;3.32
+41;;110;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+41;;111;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+41;;112;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+41;;113;DIM;20;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;50.98;20443.14;5.68
+41;;114;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+41;;115;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+41;;112;DIM;13.5;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;34.41;13799.12;3.83
+41;;113;DIM;14.5;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;36.96;14821.27;4.12
+41;;112;DIM;0;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+41;;113;DIM;1;401;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;260650;72.4
+44;;100;DIM;8;197;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;5871.37;1.63
+44;;101;DIM;0;197;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+44;;102;DIM;6;197;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4403.53;1.22
+44;;103;DIM;0;197;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+44;;104;DIM;0;197;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+44;;105;DIM;8;197;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;5871.37;1.63
+44;;110;DIM;0;197;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+44;;111;DIM;0;197;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+44;;112;DIM;23;197;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;58.63;11549.61;3.21
+44;;113;DIM;24;197;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;61.18;12051.76;3.35
+44;;114;DIM;0;197;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+44;;115;DIM;0;197;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+45;;100;DIM;0;15;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+45;;101;DIM;0;15;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+45;;102;DIM;6;15;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;335.29;0.09
+45;;103;DIM;0;15;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+45;;104;DIM;0;15;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+45;;105;DIM;16.5;15;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;61.47;922.06;0.26
+45;;110;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+45;;111;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+45;;112;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+45;;113;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+45;;114;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+45;;115;DIM;0;15;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+46;;100;DIM;0;130;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+46;;101;DIM;0;130;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+46;;102;DIM;6;130;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;2905.88;0.81
+46;;103;DIM;0;130;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+46;;104;DIM;0;130;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+46;;105;DIM;20;130;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;74.51;9686.27;2.69
+46;;110;DIM;0;130;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+46;;111;DIM;0;130;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+46;;112;DIM;0;130;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+46;;113;DIM;0;130;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+46;;114;DIM;0;130;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+46;;115;DIM;0;130;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+47;;100;DIM;0;243;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+47;;101;DIM;0;243;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+47;;102;DIM;6;243;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;5431.76;1.51
+47;;103;DIM;23;243;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;85.69;20821.76;5.78
+47;;104;DIM;0;243;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+47;;105;DIM;0;243;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
+47;;110;DIM;0;243;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+47;;111;DIM;0;243;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+47;;112;DIM;0;243;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+47;;113;DIM;0;243;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+47;;114;DIM;0;243;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+47;;115;DIM;0;243;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+48;;100;DIM;0;226;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+48;;101;DIM;0;226;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+48;;102;DIM;6;226;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;5051.76;1.4
+48;;103;DIM;0;226;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+48;;104;DIM;0;226;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+48;;105;DIM;12;226;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;44.71;10103.53;2.81
+48;;110;DIM;0;226;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+48;;111;DIM;0;226;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+48;;112;DIM;0;226;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+48;;113;DIM;0;226;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+48;;114;DIM;0;226;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+48;;115;DIM;0;226;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+49;;100;DIM;8;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;9149.8;2.54
+49;;101;DIM;0;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+49;;102;DIM;6;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;6862.35;1.91
+49;;103;DIM;0;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+49;;104;DIM;0;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+49;;105;DIM;8;307;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;9149.8;2.54
+49;;110;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+49;;111;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+49;;112;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+49;;113;DIM;19;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;48.43;14868.43;4.13
+49;;114;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+49;;115;DIM;0;307;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+50;;101;DIM;17;298;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;63.33;18873.33;5.24
+51;;101;DIM;0;309;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+52;;100;DIM;8;380;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;11325.49;3.15
+52;;101;DIM;0;380;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+52;;102;DIM;6;380;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;8494.12;2.36
+52;;103;DIM;0;380;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+52;;104;DIM;0;380;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+52;;105;DIM;8;380;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;11325.49;3.15
+52;;110;DIM;0;380;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+52;;111;DIM;0;380;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+52;;112;DIM;0;380;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+52;;113;DIM;1;380;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;247000;68.61
+52;;114;DIM;0;380;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+52;;115;DIM;0;380;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+53;;100;DIM;8;181;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;5394.51;1.5
+53;;101;DIM;0;181;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+53;;102;DIM;0;181;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+53;;103;DIM;24;181;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;89.41;16183.53;4.5
+53;;104;DIM;0;181;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+53;;105;DIM;8;181;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;5394.51;1.5
+53;;110;DIM;0;181;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+53;;111;DIM;0;181;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+53;;112;DIM;0;181;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+53;;113;DIM;1;181;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;650;117650;32.68
+53;;114;DIM;0;181;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+53;;115;DIM;0;181;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+54;;100;DIM;8;60;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;29.8;1788.24;0.5
+54;;101;DIM;0;60;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+54;;102;DIM;6;60;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;1341.18;0.37
+54;;103;DIM;0;60;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+54;;104;DIM;0;60;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+54;;105;DIM;8;60;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;1788.24;0.5
+54;;110;DIM;28;60;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;71.37;4282.35;1.19
+54;;111;DIM;28;60;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;71.37;4282.35;1.19
+54;;112;DIM;28;60;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;71.37;4282.35;1.19
+54;;113;DIM;29;60;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;73.92;4435.29;1.23
+54;;114;DIM;28;60;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;71.37;4282.35;1.19
+54;;115;DIM;28;60;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;71.37;4282.35;1.19
+55;;100;DIM;21.5;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;80.1;16259.9;4.52
+55;;101;DIM;0;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+55;;102;DIM;6;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4537.65;1.26
+55;;103;DIM;0;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+55;;104;DIM;0;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+55;;105;DIM;8;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;6050.2;1.68
+55;;110;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+55;;111;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+55;;112;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+55;;113;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+55;;114;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+55;;115;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+55;;100;DIM;21.5;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;80.1;16259.9;4.52
+55;;101;DIM;0;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+55;;102;DIM;6;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;22.35;4537.65;1.26
+55;;103;DIM;0;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+55;;104;DIM;0;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+55;;105;DIM;8;203;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;29.8;6050.2;1.68
+55;;110;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+55;;111;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+55;;112;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+55;;113;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+55;;114;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+55;;115;DIM;0;203;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+56;;100;DIM;0;171;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+56;;101;DIM;0;171;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+56;;102;DIM;0;171;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+56;;103;DIM;0;171;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+56;;104;DIM;0;171;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+56;;105;DIM;0;171;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
+56;;110;DIM;0;171;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+56;;111;DIM;0;171;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+56;;112;DIM;0;171;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+56;;113;DIM;0;171;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+56;;114;DIM;0;171;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+56;;115;DIM;0;171;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0
+57;;100;DIM;0;239;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 1;0;0;0
+57;;101;DIM;0;239;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 2;0;0;0
+57;;102;DIM;0;239;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 3;0;0;0
+57;;103;DIM;0;239;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 4;0;0;0
+57;;104;DIM;0;239;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 5;0;0;0
+57;;105;DIM;0;239;6 Revolution BM/SM Original Scroller;950;REV4;Revolution 6;0;0;0
+57;;110;DIM;40;239;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;101.96;24368.63;6.77
+57;;111;DIM;40;239;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;101.96;24368.63;6.77
+57;;112;DIM;40;239;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;101.96;24368.63;6.77
+57;;113;DIM;40;239;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;101.96;24368.63;6.77
+57;;114;DIM;40;239;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;101.96;24368.63;6.77
+57;;115;DIM;40;239;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;101.96;24368.63;6.77
+58;;110;DIM;0;64;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 1;0;0;0
+58;;111;DIM;0;64;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 2;0;0;0
+58;;112;DIM;0;64;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 3;0;0;0
+58;;113;DIM;0;64;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 4;0;0;0
+58;;114;DIM;0;64;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 5;0;0;0
+58;;115;DIM;0;64;8 autoyoke_jj (8)                   ;650;AUTOYOKE;autoyoke 6;0;0;0

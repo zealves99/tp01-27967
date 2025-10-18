@@ -140,26 +140,28 @@
 	
 	O ficheiro \texttt{a27967.kjb} define a sequência lógica do processamento, garantindo que as transformações sejam executadas na ordem correta, dependendo umas das outras.
 	
-	\begin{figure}[h!]
-		\centering
-		\framebox{\parbox{0.9\textwidth}{\centering
-				\vspace{1cm}
-				\textbf{Esquema do Job Principal (\texttt{a27967.kjb})} \\
-				\textit{Representação da Sequência de Execução (Job Entry)}\\
-				\texttt{Start} $\rightarrow$ \texttt{Patch Import (TRANS)} $\rightarrow$ \texttt{CueData Import (TRANS)} $\rightarrow$ \texttt{Calculate Power Consumption (TRANS)} $\rightarrow$ \texttt{Graph\_Generator (TRANS)} $\rightarrow$ \texttt{Send Email (TRANS)}
-				\vspace{1cm}
-		}}
-		\caption{Fluxo de controlo principal definido no Job (\texttt{a27967.kjb}), que ilustra a sequência completa de ETL e Gera o Relatório.}
-		\label{fig:job_flow}
-	\end{figure}
-	
-	Este fluxo garante que:
+	O fluxo garante que:
 	\begin{itemize}
 		\item Os dados de \textit{patch} e potência são importados.
 		\item Os dados das \textit{cues} (intensidades e tempos) são extraídos.
 		\item O cálculo de consumo é realizado.
-		\item Os gráficos são gerados e, finalmente, o relatório é enviado por e-mail.
+		\item Após o cálculo, o Node-RED é ativado para processar os dados de saída e gerar os ficheiros \textit{JSON}, necessários ao script \textit{Python}.
+		\item O Kettle aguarda (Wait for JSON) que o Node-RED complete a geração dos ficheiros JSON de dados (pelo menos o \texttt{layer-graph-data.json}) antes de prosseguir.
+		\item Os gráficos são gerados e enviados por e-mail.
 	\end{itemize}
+		
+	\begin{figure}[h!]
+		\centering
+		\framebox{\parbox{0.9\textwidth}{\centering
+				\vspace{1cm}
+				\textbf{Esquema do Job Mestre (\texttt{a27967.kjb})} \\
+				\textit{Representação da Sequência de Execução (Job Entry)}\\
+				\texttt{Start} $\rightarrow$ \texttt{Patch Import (TRANS)} $\rightarrow$ \texttt{CueData Import (TRANS)} $\rightarrow$ \texttt{Calculate Power Consumption (TRANS)} $\rightarrow$ \textbf{\texttt{Trigger Node Red (HTTP)}} $\rightarrow$ \textbf{\texttt{Wait for JSON}} $\rightarrow$ \texttt{Graph\_Generator (TRANS)} $\rightarrow$ \texttt{Send Email (TRANS)}
+				\vspace{1cm}
+		}}
+		\caption{Fluxo de controlo principal definido no Job (\texttt{a27967.kjb}), ilustrando a sequência completa de ETL e Geração do Relatório, incluindo o \textit{trigger }HTTP e a espera pelo Node-RED.}
+		\label{fig:job_flow}
+	\end{figure}
 	
 	\section{Descrição Detalhada das Transformações}
 	
