@@ -113,7 +113,11 @@ O objetivo é **integrar dados provenientes de múltiplas fontes (XML, CSV, Node
 1. **Definir os caminhos absolutos dos seguintes ficheiros:**  
    1. No Node-RED:  
       - Node Read Fixture CSV: *fixture_consumption.csv*  
-      - Node Read Dimmer CSV: *dimmer_consumption.csv*  
+      - Node Read Dimmer CSV: *dimmer_consumption.csv*
+      - Node Layer Graph Data out
+      - Node Fixture Graph Data out
+      - Node Total Power Graph Data out
+      - Node Total Energy Graph Data out
    2. No ficheiro Graph_Creation.ktr:  
       - Node Add Arguments: Campo *file-path*
      
