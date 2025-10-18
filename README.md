@@ -141,7 +141,8 @@ O objetivo é **integrar dados provenientes de múltiplas fontes (XML, CSV, Node
 
 ## Vídeo de Demonstração
 O vídeo de demonstração de funcionamento do projeto encontra-se disponível em:  
-[(https://drive.google.com/file/d/1RRWLoZ3B_z-71w5YES_I2-tnTTPk_BVg/view?usp=drive_link)]
+[vídeo de demonstração](https://drive.google.com/file/d/1RRWLoZ3B_z-71w5YES_I2-tnTTPk_BVg/view?usp=drive_link)
+
 
 ---
 
