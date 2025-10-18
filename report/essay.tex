@@ -177,10 +177,13 @@
 	\end{itemize}
 	
 	O snippet do JavaScript para simular o tempo entre \textit{cues} é:
-	\begin{KettleCode}
-		// Gera um valor aleatório (em segundos) para simular o tempo entre Cues.
-		var betweenCuesTime = Math.floor(Math.random() * (420 - 10 + 1)) + 10;
-	\end{KettleCode}
+\noindent
+\begin{KettleCode}
+// Gera um valor aleatório (em segundos) para simular o tempo entre Cues.
+var betweenCuesTime = Math.floor(Math.random() * (420 - 10 + 1)) + 10;
+\end{KettleCode}
+
+
 	
 	\begin{figure}[h!]
 		\centering
@@ -234,25 +237,26 @@
 	\end{itemize}
 	
 	Snippet do JavaScript para cálculo de Potência e Energia:
-	\begin{KettleCode}
-		// Normaliza a intensidade: converte valor DMX (0-255) para percentagem (0-1)
-		var val = parseFloat(Value);
-		if (val > 1) val = val / 255;  
-		
-		// Calcula o Consumo Instantâneo de Potência (Potência em Watts)
-		// P = Intensidade Normalizada * Potência Máxima
-		var P = val * parseFloat(MaxPower);
-		
-		// Calcula a Energia (Dur é o tempo entre cues, em segundos)
-		var dur = parseFloat(betweenCuesTime);
-		var E_J = P * dur; // Energia em Joules
-		var E_Wh = E_J / 3600; // Energia em Watt-hora (Wh)
-		
-		// Arredonda para duas casas decimais e define os campos de saída
-		PowerUsed = Math.round(P * 100) / 100;
-		Energy_J  = Math.round(E_J * 100) / 100;
-		Energy_Wh = Math.round(E_Wh * 100) / 100;
-	\end{KettleCode}
+	\noindent
+\begin{KettleCode}
+// Normaliza a intensidade: converte valor DMX (0-255) para percentagem (0-1)
+var val = parseFloat(Value);
+if (val > 1) val = val / 255;  
+
+// Calcula o Consumo Instantâneo de Potência (Potência em Watts)
+// P = Intensidade Normalizada * Potência Máxima
+var P = val * parseFloat(MaxPower);
+
+// Calcula a Energia (Dur é o tempo entre cues, em segundos)
+var dur = parseFloat(betweenCuesTime);
+var E_J = P * dur; // Energia em Joules
+var E_Wh = E_J / 3600; // Energia em Watt-hora (Wh)
+
+// Arredonda para duas casas decimais e define os campos de saída
+PowerUsed = Math.round(P * 100) / 100;
+Energy_J  = Math.round(E_J * 100) / 100;
+Energy_Wh = Math.round(E_Wh * 100) / 100;
+\end{KettleCode}
 	\begin{itemize}
 		\item \textbf{Saída:} Cria os ficheiros \texttt{fixture\_consumption.csv} e \texttt{dimmer\_consumption.csv}.
 	\end{itemize}
@@ -321,7 +325,7 @@
 		\item \textbf{Caminho a Substituir:} O utilizador deve substituir a porção do caminho que aponta para a pasta do projeto (\texttt{H:\textbackslash LESI\textbackslash ISI\textbackslash tp01-27967}) pelo caminho local onde o projeto está guardado.
 	\end{itemize}
 	
-	Os nós que requerem esta atualização são os nós \texttt{inject} (\texttt{Read Fixture CSV} e \texttt{Read Dimmer CSV}) e os nós \texttt{file} de saída. Por exemplo, o caminho:
+	Os nós que requerem esta atualização são os nós \texttt{inject} (\texttt{\textbf{Read Fixture CSV}} e \texttt{\textbf{Read Dimmer CSV}}) e os nós \texttt{file} de saída (\textit{\textbf{Layer Graph Data out}}, \textit{\textbf{Fixture Graph Data out}}, \textit{\textbf{Total Power Graph Data out}} e \textit{\textbf{Total Energy Graph Data out}}). Por exemplo, o caminho:
 	\begin{KettleCode}
 		H:\LESI\ISI\tp01-27967\data\output\fixture_consumption.csv
 	\end{KettleCode}
@@ -344,22 +348,23 @@
 	Os nós \texttt{function} para agregação (e.g., \texttt{Aggregate Power by Layer}) são cruciais, pois transformam o fluxo de dados plano (por \textit{Cue}/aparelho) numa estrutura sumarizada que é adequada para gráficos.
 	
 	Snippet do JavaScript para \texttt{Aggregate Power by Layer}:
-	\begin{KettleCode}
-		let data = {};
-		msg.payload.forEach(row => {
-			let layer = row.Layer || 'Unknown';
-			// Soma o PowerUsed de todas as linhas por camada
-			data[layer] = (data[layer] || 0) + parseFloat(row.PowerUsed || 0);
-		});
+	\noindent
+\begin{KettleCode}
+let data = {};
+msg.payload.forEach(row => {
+	let layer = row.Layer || 'Unknown';
+	// Soma o PowerUsed de todas as linhas por camada
+	data[layer] = (data[layer] || 0) + parseFloat(row.PowerUsed || 0);
+});
 		
-		msg.payload = [{
-			series: ["PowerUsed"],
-			data: [ Object.values(data) ],
-			labels: Object.keys(data)
-		}];
+msg.payload = [{
+	series: ["PowerUsed"],
+	data: [ Object.values(data) ],
+	labels: Object.keys(data)
+}];
 		
-		return msg;
-	\end{KettleCode}
+return msg;
+\end{KettleCode}
 	
 	\subsection{Componentes de Visualização (Dashboard)}
 	O \textbf{dashboard} é estruturado para apresentar os principais indicadores:

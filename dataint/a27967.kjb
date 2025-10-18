@@ -543,7 +543,7 @@
       <type>WAIT_FOR_FILE</type>
       <attributes/>
       <filename>${Internal.Entry.Current.Directory}\..\data\output\layer-graph-data.json</filename>
-      <maximum_timeout>15</maximum_timeout>
+      <maximum_timeout>20</maximum_timeout>
       <check_cycle_time>10</check_cycle_time>
       <success_on_timeout>N</success_on_timeout>
       <file_size_check>N</file_size_check>
